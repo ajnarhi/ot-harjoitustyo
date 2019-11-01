@@ -8,3 +8,6 @@ oppinut tänään jo _hurjan**paljon**_ kaikkea uutta.
 https://github.com/ajnarhi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt
 
 https://github.com/ajnarhi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt
+
+
+MUUTOS
