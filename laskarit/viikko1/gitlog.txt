@@ -1,0 +1,104 @@
+commit d09d7003646ee132da00783d343c5ff84cfcfbf1
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 12:49:02 2019 +0200
+
+    tässä file22 ja file3, file3:ssa oli jotain häikkää...
+
+ tiedostoja/file22 | 0
+ tiedostoja/file3  | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3377f54ba261bcf122fd0006ebd6901899afa460
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 12:22:21 2019 +0200
+
+    muutettu ekaa ja kolmatta
+
+ eka.txt    | 4 +++-
+ kolmas.txt | 3 ++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+commit d46caf3a402558cc712306c21003a62118b92afb
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 12:17:28 2019 +0200
+
+    muutetaan tiedosto.txt eka.txt:ksi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 166f18ff0786b06a94ba676b10961429c71f468a
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 12:16:09 2019 +0200
+
+    toinen.txt poistetaan
+
+ toinen.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit cc0a8bf57e653ba1d027df9d9f7b86ddbc335027
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 12:11:42 2019 +0200
+
+    tiedosto.txt muutettu osa lyriikoista suomalaisiksi
+
+ stuff/tiedosto.txt | 28 ++++++++++++++++++++--------
+ 1 file changed, 20 insertions(+), 8 deletions(-)
+
+commit 600b5090eb6348d40ea01ec9bc3923f4c75b4e34
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 12:09:27 2019 +0200
+
+    tiedosto.txt paljon tekstiä
+
+ stuff/tiedosto.txt | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 48 insertions(+)
+
+commit 997617dde19abd6c49de52b0620a5ddb1c2ea45f
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 11:57:55 2019 +0200
+
+    lisätään jokin tiedosto
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 615790fad1ff3e11874a4ae983cc147221f9b8d7
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 11:56:43 2019 +0200
+
+    toinen ja kolmas muutettuna
+
+ kolmas.txt | 2 ++
+ toinen.txt | 2 ++
+ 2 files changed, 4 insertions(+)
+
+commit f23a0afc3460a8dfcc4e3cb6def1c48677623d87
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 11:54:05 2019 +0200
+
+    kolmannen lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6a9da037756de07e358c951736b2aad6e98c8e3b
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 10:58:51 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit b3bbad322e08ae6036d7c320215bf55e73fe45a1
+Author: Annukka Närhi <annukka.narhi@gmail.com>
+Date:   Fri Nov 1 10:47:23 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+
