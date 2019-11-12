@@ -9,5 +9,7 @@ https://github.com/ajnarhi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.t
 
 https://github.com/ajnarhi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt
 
+https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md
 
-MUUTOS
+https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md
+
