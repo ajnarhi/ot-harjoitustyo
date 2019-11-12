@@ -20,7 +20,7 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 *ohjelma valitsee seuraavan lauseen
 
-#### Jatkokehtiysideat
+#### Jatkokehitysideat
 
 
 *ohjelmaa voi laajentaa kattamaan erilaisia kielioppiin liittyviä aiheita
