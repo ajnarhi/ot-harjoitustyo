@@ -33,4 +33,5 @@ public class Maksukortti {
         return "saldo: "+euroa+"."+senttia;
     } 
     
+    
 }
