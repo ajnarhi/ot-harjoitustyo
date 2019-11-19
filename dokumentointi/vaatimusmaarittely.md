@@ -27,4 +27,4 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 * ohjelmaan voidaan lisätä kirjautuminen
 
-*eri käyttäjien kehityksen seuraaminen ja tehtävien vaikeuttaminen kehityksen mukaisesti
+* eri käyttäjien kehityksen seuraaminen ja tehtävien vaikeuttaminen kehityksen mukaisesti
