@@ -50,7 +50,7 @@ public class main {
         
         System.out.println("Pisteesi tällä kierroksella: " + player1.getPoints() );
     }
-        
+} 
         
         
       /*  System.out.println("Tien yli kulki ...");

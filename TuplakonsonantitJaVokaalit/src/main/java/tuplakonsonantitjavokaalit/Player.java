@@ -30,7 +30,8 @@ public class Player {
         if (points>0){
             points--;
         
-        }
+        }else{ points=0;
     }
     
+}
 }

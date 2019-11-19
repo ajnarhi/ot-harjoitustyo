@@ -31,22 +31,27 @@ public class PlayerTest {
         assertEquals(1,player.getPoints());
     }
     
-    @BeforeClass
-    public static void setUpClass() {
+    @Test
+    public void getPointsGetsRightAmountOfPoints(){
+        assertEquals(0, player.getPoints());
     }
     
-    @AfterClass
-    public static void tearDownClass() {
+    @Test
+    public void decreasePointsDoesntDecreasePointsIfThereIsZeroPoints(){
+        player.decreasePoints();
+        assertEquals(0,player.getPoints());
+        
     }
     
-   
-    @After
-    public void tearDown() {
+    @Test
+    public void decreasePointsDoesntDecreasePointsIfThereIsLessThanZeroPoints(){
+        Player player1=new Player(-2);
+       
+        assertEquals(0,player1.getPoints()); //onko tämä testi oikein? 
+        
     }
+    
+    
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
 }
