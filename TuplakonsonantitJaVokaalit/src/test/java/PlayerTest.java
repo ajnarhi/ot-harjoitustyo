@@ -46,8 +46,9 @@ public class PlayerTest {
     @Test
     public void decreasePointsDoesntDecreasePointsIfThereIsLessThanZeroPoints(){
         Player player1=new Player(-2);
+        player1.decreasePoints();
        
-        assertEquals(0,player1.getPoints()); //onko tämä testi oikein? 
+        assertEquals(-2,player1.getPoints()); 
         
     }
     

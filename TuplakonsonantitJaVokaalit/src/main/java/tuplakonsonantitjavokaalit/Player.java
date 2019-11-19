@@ -14,7 +14,7 @@ public class Player {
     Integer points;
     
     public Player(Integer points){
-        this.points=0;
+        this.points=points;
     }
     
     public int getPoints(){
@@ -30,8 +30,8 @@ public class Player {
         if (points>0){
             points--;
         
-        }else{ points=0;
+        }
     }
     
 }
-}
+

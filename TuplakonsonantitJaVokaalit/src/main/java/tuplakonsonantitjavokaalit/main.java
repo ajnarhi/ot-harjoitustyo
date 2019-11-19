@@ -53,23 +53,14 @@ public class main {
 } 
         
         
-      /*  System.out.println("Tien yli kulki ...");
-        System.out.println("Kissa vai kisa");
-        
-        String vastaus = lukija.nextLine();
-        
-        if (vastaus.matches("kissa")){
-            System.out.println("Hienoa!");
-        }else{System.out.println("Kokeile uudestaan!");
-        */
+      
         
         
         
         
         
     
-}
+
     
-}
-}
+
 
