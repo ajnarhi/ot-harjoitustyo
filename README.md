@@ -1,12 +1,8 @@
-###### Ohjelmistotekniikan kurssi 2019
+# Ohjelmistotekniikan kurssi 2019
+## Harjoitustyö "Tuplakonsonanttien ja - vokaalien harjoitteleminen"
 
 
+[Vaatimusmäärittely](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
-https://github.com/ajnarhi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt
-
-https://github.com/ajnarhi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt
-
-https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md
-
-https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md
+[Tuntikirjanpito](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
