@@ -52,6 +52,13 @@ public class PlayerTest {
         
     }
     
+    @Test
+    public void decreasePointsDecreasesPoints(){
+        Player player1=new Player(5);
+        player1.decreasePoints();
+        assertEquals(4, player1.getPoints());
+    }
+    
     
 
     

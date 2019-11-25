@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import tuplakonsonantitjavokaalit.Question;
 
 /**
  *
@@ -17,28 +18,36 @@ import static org.junit.Assert.*;
  */
 public class QuestionTest {
     
-    public QuestionTest() {
-    }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+    Question question;
     
     @Before
     public void setUp() {
+        question=new Question("Tien yli kulki...", "kissa", "kisa");
     }
     
-    @After
-    public void tearDown() {
+    @Test
+    public void askingQuestionReturnsQuestion(){
+        
+        
+        assertEquals("Tien yli kulki...", question.ask());
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+            
+          @Test
+    public void OptionalAnswerIsReturned(){
+        
+        assertEquals("kisa", question.getOptionalAnswer());   
+    }
+    
+        
+    
+            
+            @Test
+    public void RightAnsweIsReturned(){
+        
+            assertEquals("kissa", question.getRightAnswer());  
+            
 }
+}
+    
+

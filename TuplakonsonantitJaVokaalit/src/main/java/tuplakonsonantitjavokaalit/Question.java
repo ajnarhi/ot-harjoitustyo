@@ -37,9 +37,7 @@ public class Question {
         return question;
     }
     
-    public void options(){
-        System.out.println("Tässä vastausvaihtoehdot:"+ rightAnswer +" tai "+ optionalAnswer);
-    }
+  
     
     
     

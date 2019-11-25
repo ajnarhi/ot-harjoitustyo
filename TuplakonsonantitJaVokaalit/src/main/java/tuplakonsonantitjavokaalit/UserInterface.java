@@ -25,14 +25,14 @@ public class UserInterface extends Application {
     public void start(Stage window) {
 
         Question question1 = new Question("Tien yli kulki ...", "kissa", "kisa");
-        Player player1=new Player(0);
+        Player player1 = new Player(0);
 
         window.setTitle("Harjoitus");
 
         //otsikot
         Label label = new Label("Harjoitellaan tuplakonsonantteja ja - vokaaleja");
-        Label labelGreat = new Label("Oikein! Hienoa. Pisteesi: "+ player1.getPoints());
-        Label labelWrong = new Label("Väärin. Kokeile uudestaan. Pisteesi: "+ player1.getPoints());
+        Label labelGreat = new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints());
+        Label labelWrong = new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints());
         Label labelQuestion = new Label(question1.ask());
 
         //napit
@@ -71,16 +71,16 @@ public class UserInterface extends Application {
             window.setScene(sceneQuestion);
         });
         buttonFirstChoice.setOnAction((event) -> {
-             player1.increasePoints();
-             settingRightAnswer.setTop(new Label("Oikein! Hienoa. Pisteesi: "+ player1.getPoints()));
+            player1.increasePoints();
+            settingRightAnswer.setTop(new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints()));
             window.setScene(sceneRightAnswer);
-           
+
         });
         buttonSecondChoice.setOnAction((event) -> {
             player1.decreasePoints();
-            settingWrongAnswer.setTop(new Label("Väärin. Kokeile uudestaan. Pisteesi: "+ player1.getPoints()));
+            settingWrongAnswer.setTop(new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints()));
             window.setScene(sceneWrongAnswer);
-            
+
         });
 
         buttonNewQuestion1.setOnAction((event) -> {
@@ -92,12 +92,12 @@ public class UserInterface extends Application {
         });
 
         buttonQuit1.setOnAction((event) -> {
-            System.out.println("Pisteesi: "+ player1.getPoints());
+
             window.close();
         });
 
         buttonQuit2.setOnAction((event) -> {
-            System.out.println("Pisteesi: "+ player1.getPoints());
+
             window.close();
         });
 
