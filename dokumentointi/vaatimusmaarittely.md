@@ -10,13 +10,13 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 #### Suunnitellut toiminnallisuudet
 
-* käyttäjä saa nähtäväkseen yksinkertaisen lauseen, josta puuttuu yksi sana
+* käyttäjä saa nähtäväkseen yksinkertaisen lauseen, josta puuttuu yksi sana TEHTY
 
-* käyttäjä valitsee kahdesta sanavaihtoehdosta omasta mielestään oikean sanan tyhjään kohtaan
+* käyttäjä valitsee kahdesta sanavaihtoehdosta omasta mielestään oikean sanan tyhjään kohtaan TEHTY
 
-* käyttäjä hyväksyy vaihtoehdon
+* käyttäjä hyväksyy vaihtoehdon TEHTY
 
-* ohjelma kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon tai seyraavan lauseen
+* ohjelma kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon TEHTY tai seuraavan lauseen  
 
 * ohjelma valitsee seuraavan lauseen
 
