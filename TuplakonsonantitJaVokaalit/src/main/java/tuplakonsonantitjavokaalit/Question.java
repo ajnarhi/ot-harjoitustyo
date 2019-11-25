@@ -5,11 +5,16 @@
  */
 package tuplakonsonantitjavokaalit;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ajnarhi
  */
 public class Question {
+    
+    
+    
     
     String question;
     String rightAnswer;
@@ -24,8 +29,12 @@ public class Question {
         
         return rightAnswer;
     }
-    public void ask(){
-        System.out.println(question);
+    
+    public String getOptionalAnswer(){
+        return optionalAnswer;
+    }
+    public String ask(){
+        return question;
     }
     
     public void options(){
@@ -33,4 +42,20 @@ public class Question {
     }
     
     
+    
+    
 }
+
+
+/*  
+ArrayList <Question>questions=new ArrayList();
+Question question1=new Question("Tien yli kulki ...", "kissa", "kisa");
+        Question question2=new Question("Oi miten ihanalta tämä ... tuoksuu","kukka", "kuka");
+        Question question3=new Question("... vei kirjani?","kuka", "kukka");
+        Question question4=new Question("Mikään ei polta ihoa niin pahasti kuin ...","tuli","tuuli");
+        Question question5=new Question("Meidän täytyy ottaa joskus juoksu...","kisa", "kissa");
+        questions.add(question1);
+        questions.add(question2);
+        questions.add(question3);
+        questions.add(question4);
+        questions.add(question5);*/

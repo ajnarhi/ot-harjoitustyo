@@ -5,17 +5,31 @@
  */
 package tuplakonsonantitjavokaalit;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+
+
+import javafx.application.Application;
+
+
 
 /**
  *
  * @author ajnarhi
  */
+
 public class main {
+
+         public static void main(String[] args) {
+      Application.launch(UserInterface.class);
+  }
+}   
+
+        
+   /*  
+
+public class main{
     
     public static void main(String [] args){
-        Scanner lukija = new Scanner(System.in);
+Scanner lukija = new Scanner(System.in);
         ArrayList <Question>questions=new ArrayList();
         
         Player player1=new Player(0);
@@ -30,6 +44,7 @@ public class main {
         questions.add(question3);
         questions.add(question4);
         questions.add(question5);
+        
         
         
         System.out.println("Harjoitellaan tuleeko vokaaleja tai konsonantteja yksi vai kaksi");
@@ -49,10 +64,7 @@ public class main {
         }
         
         System.out.println("Pisteesi tällä kierroksella: " + player1.getPoints() );
-    }
-} 
-        
-        
+    }*/  
       
         
         
