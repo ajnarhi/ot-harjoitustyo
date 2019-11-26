@@ -6,6 +6,6 @@ Päivä	|Aika	|Mitä tein
 18.11|4|ohjelman suunnittelu, aloitus ja muutaman testin tekeminen
 19.11|1|jacocon lisääminen ja säätäminen
 25.11|5|käyttöliittymän raakaversion teko
-
+26.11|1|Virheiden korjaus ja checkstyle
 Yhteensä|11|
 
