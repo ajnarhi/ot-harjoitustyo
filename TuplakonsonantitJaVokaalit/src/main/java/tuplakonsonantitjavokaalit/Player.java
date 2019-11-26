@@ -10,28 +10,26 @@ package tuplakonsonantitjavokaalit;
  * @author ajnarhi
  */
 public class Player {
-    
+
     Integer points;
-    
-    public Player(Integer points){
-        this.points=points;
+
+    public Player(Integer points) {
+        this.points = points;
     }
-    
-    public int getPoints(){
+
+    public int getPoints() {
         return points;
-    
-}
-    
-    public void increasePoints(){
+    }
+
+    public void increasePoints() {
         points++;
     }
-    
-    public void decreasePoints(){
-        if (points>0){
+
+    public void decreasePoints() {
+        if (points > 0) {
             points--;
-        
+
         }
     }
-    
-}
 
+}

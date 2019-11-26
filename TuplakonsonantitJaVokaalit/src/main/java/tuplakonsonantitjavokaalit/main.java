@@ -5,26 +5,20 @@
  */
 package tuplakonsonantitjavokaalit;
 
-
-
 import javafx.application.Application;
-
-
 
 /**
  *
  * @author ajnarhi
  */
-
 public class main {
 
-         public static void main(String[] args) {
-      Application.launch(UserInterface.class);
-  }
-}   
+    public static void main(String[] args) {
+        Application.launch(UserInterface.class);
+    }
+}
 
-        
-   /*  
+/*  
 
 public class main{
     
@@ -64,15 +58,4 @@ Scanner lukija = new Scanner(System.in);
         }
         
         System.out.println("Pisteesi tällä kierroksella: " + player1.getPoints() );
-    }*/  
-      
-        
-        
-        
-        
-        
-    
-
-    
-
-
+    }*/
