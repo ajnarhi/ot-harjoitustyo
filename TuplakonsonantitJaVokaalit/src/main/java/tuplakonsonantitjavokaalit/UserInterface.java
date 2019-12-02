@@ -6,6 +6,8 @@
 package tuplakonsonantitjavokaalit;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Scene;
@@ -23,8 +25,12 @@ public class UserInterface extends Application {
 
     @Override
     public void start(Stage window) {
+        
+        QuestionDao database=new DatabaseQuestionDao();
+        Random random = new Random();
+        List<Question>databaseQuestions=database.getQuestions();
 
-        Question question1 = new Question("Tien yli kulki ...", "kissa", "kisa");
+        Question question1 = databaseQuestions.get(random.nextInt(databaseQuestions.size()));
         Player player1 = new Player(0);
 
         window.setTitle("Harjoitus");
