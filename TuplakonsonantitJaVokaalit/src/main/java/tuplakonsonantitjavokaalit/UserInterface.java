@@ -26,11 +26,9 @@ public class UserInterface extends Application {
     @Override
     public void start(Stage window) {
         
-        QuestionDao database=new DatabaseQuestionDao();
-        Random random = new Random();
-        List<Question>databaseQuestions=database.getQuestions();
+       Controller controller=new Controller();
 
-        Question question1 = databaseQuestions.get(random.nextInt(databaseQuestions.size()));
+        controller.newRound();
         Player player1 = new Player(0);
 
         window.setTitle("Harjoitus");
@@ -39,12 +37,12 @@ public class UserInterface extends Application {
         Label label = new Label("Harjoitellaan tuplakonsonantteja ja - vokaaleja");
         Label labelGreat = new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints());
         Label labelWrong = new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints());
-        Label labelQuestion = new Label(question1.ask());
+        Label labelQuestion = new Label(controller.getQuestion());
 
         //napit
         Button buttonLetsBegin = new Button("Aloita!");
-        Button buttonFirstChoice = new Button(question1.getRightAnswer());
-        Button buttonSecondChoice = new Button(question1.getOptionalAnswer());
+        Button buttonFirstChoice = new Button(controller.getFirstAnswer());
+        Button buttonSecondChoice = new Button(controller.getSecondAnswer());
         Button buttonNewQuestion1 = new Button("Uusi kysymys");
         Button buttonNewQuestion2 = new Button("Uusi kysymys");
         Button buttonQuit1 = new Button("Lopeta");
@@ -90,10 +88,20 @@ public class UserInterface extends Application {
         });
 
         buttonNewQuestion1.setOnAction((event) -> {
+            controller.newRound();
+            labelQuestion.setText(controller.getQuestion());
+            buttonFirstChoice.setText(controller.getFirstAnswer());
+            buttonSecondChoice.setText(controller.getSecondAnswer());
+        
+            
             window.setScene(sceneQuestion);
         });
 
         buttonNewQuestion2.setOnAction((event) -> {
+            controller.newRound();
+            labelQuestion.setText(controller.getQuestion());
+            buttonFirstChoice.setText(controller.getFirstAnswer());
+            buttonSecondChoice.setText(controller.getSecondAnswer());
             window.setScene(sceneQuestion);
         });
 
