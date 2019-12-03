@@ -16,9 +16,10 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 * käyttäjä hyväksyy vaihtoehdon TEHTY
 
-* ohjelma kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon TEHTY tai seuraavan lauseen  
+* ohjelma kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon TEHTY tai seuraavan lauseen TEHTY  
 
-* ohjelma valitsee seuraavan lauseen
+* ohjelma valitsee seuraavan lauseen TEHTY
+
 
 #### Jatkokehitysideat
 
