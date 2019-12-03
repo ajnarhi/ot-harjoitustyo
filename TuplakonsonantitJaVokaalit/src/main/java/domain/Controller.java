@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tuplakonsonantitjavokaalit;
+package domain;
 
+import dao.QuestionDao;
+import dao.DatabaseQuestionDao;
 import java.util.List;
 import java.util.Random;
 

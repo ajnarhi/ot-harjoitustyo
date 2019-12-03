@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tuplakonsonantitjavokaalit;
+package domain;
 
 import java.util.ArrayList;
 
@@ -39,15 +39,4 @@ public class Question {
 }
 
 
-/*  
-ArrayList <Question>questions=new ArrayList();
-Question question1=new Question("Tien yli kulki ...", "kissa", "kisa");
-        Question question2=new Question("Oi miten ihanalta tämä ... tuoksuu","kukka", "kuka");
-        Question question3=new Question("... vei kirjani?","kuka", "kukka");
-        Question question4=new Question("Mikään ei polta ihoa niin pahasti kuin ...","tuli","tuuli");
-        Question question5=new Question("Meidän täytyy ottaa joskus juoksu...","kisa", "kissa");
-        questions.add(question1);
-        questions.add(question2);
-        questions.add(question3);
-        questions.add(question4);
-        questions.add(question5);*/
+
