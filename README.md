@@ -6,6 +6,8 @@
 
 [Tuntikirjanpito](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
+[Arkkitehtuurikuvaus](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
+
 ## Komentorivitoiminnot
 ### Testaus
 
