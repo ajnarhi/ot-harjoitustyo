@@ -13,17 +13,15 @@ import java.util.List;
  *
  * @author ajnarhi
  */
-public class MockQuestionDao implements QuestionDao{
-    
-    
+public class MockQuestionDao implements QuestionDao {
 
     @Override
     public List<Question> getQuestions() {
         List<Question> allQuestions = new ArrayList();
-        Question testQuestion=new Question("Tien poikki kulki <mikä?>","kissa","kisa");
+        Question testQuestion = new Question("Tien poikki kulki <mikä?>", "kissa", "kisa");
         allQuestions.add(testQuestion);
         return allQuestions;
-        
+
     }
-    
+
 }
