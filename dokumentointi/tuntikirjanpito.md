@@ -8,6 +8,6 @@ Päivä	|Aika	|Mitä tein
 25.11|5|käyttöliittymän raakaversion teko
 26.11|2|Virheiden korjaus ja checkstyle
 28.11|2|Tietokanta SQLiten pystytys ja testaaminen
-2.12|2|Tiedon laittaminen tietokantaan ja yritys selvittää miten haku tietokannasta saadaan satunnaiseksi
-Yhteensä|17|
+2.12|3|Tiedon laittaminen tietokantaan ja yritys selvittää miten haku tietokannasta saadaan satunnaiseksi. Kysymysten haku satunnaistettu.
+Yhteensä|18|
 
