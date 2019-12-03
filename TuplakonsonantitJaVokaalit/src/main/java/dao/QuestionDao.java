@@ -13,11 +13,6 @@ import domain.Question;
  * @author ajnarhi
  */
 public interface QuestionDao {
-    
-    List<Question>getQuestions();
-    
-        
-        
-    }
-    
 
+    List<Question> getQuestions();
+}

@@ -5,6 +5,7 @@
  */
 package ui;
 
+import dao.DatabaseQuestionDao;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,8 +28,8 @@ public class UserInterface extends Application {
 
     @Override
     public void start(Stage window) {
-        
-       Controller controller=new Controller();
+
+        Controller controller = new Controller(new DatabaseQuestionDao());
 
         controller.newRound();
         Player player1 = new Player(0);
@@ -94,8 +95,7 @@ public class UserInterface extends Application {
             labelQuestion.setText(controller.getQuestion());
             buttonFirstChoice.setText(controller.getFirstAnswer());
             buttonSecondChoice.setText(controller.getSecondAnswer());
-        
-            
+
             window.setScene(sceneQuestion);
         });
 

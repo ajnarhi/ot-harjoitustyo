@@ -15,38 +15,38 @@ import java.util.Random;
  * @author ajnarhi
  */
 public class Controller {
-    QuestionDao database=new DatabaseQuestionDao();
+
+    QuestionDao database;
     Random random = new Random();
-    List<Question>databaseQuestions;
+    List<Question> databaseQuestions;
     Question question;
-    
-    public Controller(){
-    
-        databaseQuestions=database.getQuestions();
-    
+
+    public Controller(QuestionDao database) {
+        this.database = database;
+        databaseQuestions = database.getQuestions();
+
     }
-    
-    public Question getRandomQuestionFromTheList(){
-        Question question = databaseQuestions.get(random.nextInt(databaseQuestions.size()));
-        return question;
+
+    public Question getRandomQuestionFromTheList() {
+        return databaseQuestions.get(random.nextInt(databaseQuestions.size()));
         
+
     }
-    
-    public void newRound(){
+
+    public void newRound() {
         question = getRandomQuestionFromTheList();
     }
-    
-    public String getQuestion(){
+
+    public String getQuestion() {
         return question.ask();
     }
-    
-    public String getFirstAnswer(){
+
+    public String getFirstAnswer() {
         return question.getRightAnswer();
     }
-    
-    public String getSecondAnswer(){
+
+    public String getSecondAnswer() {
         return question.getOptionalAnswer();
     }
-    
-    
+
 }
