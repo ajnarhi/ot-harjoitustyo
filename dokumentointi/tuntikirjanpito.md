@@ -10,5 +10,5 @@ Päivä	|Aika	|Mitä tein
 28.11|2|Tietokanta SQLiten pystytys ja testaaminen
 2.12|3|Tiedon laittaminen tietokantaan ja yritys selvittää miten haku tietokannasta saadaan satunnaiseksi. Kysymysten haku satunnaistettu.
 3.12|4|Testien jatkaminen, pakettirakenteen korjaaminen ja siitä johtuvien ongelmien ratkaisu ym. viikon ohjeiden noudattaminen
-Yhteensä|18|
+Yhteensä|22|
 
