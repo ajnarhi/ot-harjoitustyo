@@ -78,46 +78,71 @@ public class UserInterface extends Application {
             window.setScene(sceneQuestion);
         });
         buttonFirstChoice.setOnAction((event) -> {
-            player1.increasePoints();
-            settingRightAnswer.setTop(new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints()));
-            window.setScene(sceneRightAnswer);
+            if (controller.getRandomNumber() == 0) {
+                player1.increasePoints();
+                settingRightAnswer.setTop(new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints()));
+                window.setScene(sceneRightAnswer);
+            } else {
+                player1.decreasePoints();
+                settingWrongAnswer.setTop(new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints()));
+                window.setScene(sceneWrongAnswer);
 
-        });
+            }
+
+        }
+        );
         buttonSecondChoice.setOnAction((event) -> {
-            player1.decreasePoints();
-            settingWrongAnswer.setTop(new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints()));
-            window.setScene(sceneWrongAnswer);
 
-        });
+            if (controller.getRandomNumber() == 1) {
+                player1.increasePoints();
+                settingRightAnswer.setTop(new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints()));
+                window.setScene(sceneRightAnswer);
+            } else {
+                player1.decreasePoints();
+                settingWrongAnswer.setTop(new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints()));
+                window.setScene(sceneWrongAnswer);
 
-        buttonNewQuestion1.setOnAction((event) -> {
-            controller.newRound();
-            labelQuestion.setText(controller.getQuestion());
-            buttonFirstChoice.setText(controller.getFirstAnswer());
-            buttonSecondChoice.setText(controller.getSecondAnswer());
+            }
+        }
+        );
 
-            window.setScene(sceneQuestion);
-        });
+        buttonNewQuestion1.setOnAction(
+                (event) -> {
+                    controller.newRound();
+                    labelQuestion.setText(controller.getQuestion());
+                    buttonFirstChoice.setText(controller.getFirstAnswer());
+                    buttonSecondChoice.setText(controller.getSecondAnswer());
 
-        buttonNewQuestion2.setOnAction((event) -> {
-            controller.newRound();
-            labelQuestion.setText(controller.getQuestion());
-            buttonFirstChoice.setText(controller.getFirstAnswer());
-            buttonSecondChoice.setText(controller.getSecondAnswer());
-            window.setScene(sceneQuestion);
-        });
+                    window.setScene(sceneQuestion);
+                }
+        );
 
-        buttonQuit1.setOnAction((event) -> {
+        buttonNewQuestion2.setOnAction(
+                (event) -> {
+                    controller.newRound();
+                    labelQuestion.setText(controller.getQuestion());
+                    buttonFirstChoice.setText(controller.getFirstAnswer());
+                    buttonSecondChoice.setText(controller.getSecondAnswer());
+                    window.setScene(sceneQuestion);
+                }
+        );
 
-            window.close();
-        });
+        buttonQuit1.setOnAction(
+                (event) -> {
 
-        buttonQuit2.setOnAction((event) -> {
+                    window.close();
+                }
+        );
 
-            window.close();
-        });
+        buttonQuit2.setOnAction(
+                (event) -> {
+
+                    window.close();
+                }
+        );
 
         window.setScene(sceneWelcome);
+
         window.show();
 
     }

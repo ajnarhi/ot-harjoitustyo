@@ -20,10 +20,12 @@ public class Controller {
     Random random = new Random();
     List<Question> databaseQuestions;
     Question question;
+    int randomNumberForAnswers;
 
     public Controller(QuestionDao database) {
         this.database = database;
         databaseQuestions = database.getQuestions();
+        
 
     }
 
@@ -35,6 +37,9 @@ public class Controller {
 
     public void newRound() {
         question = getRandomQuestionFromTheList();
+        randomNumberForAnswers = random.nextInt(2);
+        
+        
     }
 
     public String getQuestion() {
@@ -42,11 +47,27 @@ public class Controller {
     }
 
     public String getFirstAnswer() {
-        return question.getRightAnswer();
+        
+        if (randomNumberForAnswers==0){
+            return question.getRightAnswer();
+            
+        }else{
+            return question.getOptionalAnswer();
+        }
+        
     }
 
     public String getSecondAnswer() {
-        return question.getOptionalAnswer();
+          if (randomNumberForAnswers==0){
+            return question.getOptionalAnswer();
+            
+        }else{
+            return question.getRightAnswer();
+        }
+    }
+    
+    public int getRandomNumber(){
+        return randomNumberForAnswers;
     }
 
 }
