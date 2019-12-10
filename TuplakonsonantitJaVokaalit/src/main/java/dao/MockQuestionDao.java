@@ -18,13 +18,20 @@ import java.util.List;
  * Luokka on testausta varten tehty tietokantamalli
  */
 public class MockQuestionDao implements QuestionDao {
-    
-    
-/**
+
+    List<Player> allPlayers;
+
+    public MockQuestionDao() {
+        allPlayers = new ArrayList();
+        Player testPlayer = new Player("aarni", 5);
+        allPlayers.add(testPlayer);
+    }
+
+    /**
      * Metodi palauttaa yhden kysymyksen vastausvaihtoehtoineen listana.
      *
      *
-     *@return Palauttaa yhden kysymyksen vastausvaihtoehtoineen listana
+     * @return Palauttaa yhden kysymyksen vastausvaihtoehtoineen listana
      */
     @Override
     public List<Question> getQuestions() {
@@ -34,31 +41,28 @@ public class MockQuestionDao implements QuestionDao {
         return allQuestions;
 
     }
-    
+
     /**
      * Metodi palauttaa yhden pelaajan, jolle on annettu pisteitä listassa.
      *
      *
-     *@return Palauttaa yhden pelaajan ja hänen pisteensä listana
-     */ 
-
+     * @return Palauttaa yhden pelaajan ja hänen pisteensä listana
+     */
     @Override
     public List<Player> getPlayers() {
-        List<Player> allPlayers = new ArrayList();
-        Player testPlayer = new Player("Aarni", 5);
-        allPlayers.add(testPlayer);
+
         return allPlayers;
     }
 
-     /**
+    /**
      * Metodia rakennetaan vielä.
      *
      *
      *
-     */ 
+     */
     @Override
     public void insertNewPlayer(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        allPlayers.add(player);
     }
 
 }

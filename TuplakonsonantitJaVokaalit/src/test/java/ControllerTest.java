@@ -7,6 +7,7 @@ import dao.DatabaseQuestionDao;
 import dao.MockQuestionDao;
 import dao.QuestionDao;
 import domain.Controller;
+import domain.Player;
 import domain.Question;
 import java.util.Random;
 import org.junit.After;
@@ -37,19 +38,42 @@ public class ControllerTest {
         assertEquals(controller.getQuestion(), "Tien poikki kulki <mikä?>");
 
     }
-    
-    /*@Test
-    public void getFirstAnswerGetsRightAnswerWhenRandomNumberIsZero(){
-        controller.newRound();
-        int randomNumberForAnswers=0;
-        String answer=controller.getFirstAnswer();
-        
-        assertEquals("kissa", answer);
-        
-        
-        
-    }*/
 
-  
+    @Test
+    public void getFirstAnswerAndGetSecondAnswerGiveDifferentAnswers() {
+        controller.newRound();
+
+        String answer1 = controller.getFirstAnswer();
+        String answer2 = controller.getSecondAnswer();
+
+        assertNotEquals(answer1, answer2);
+
+    }
+
+    @Test
+    public void checkIfNameIsOnThePlayerListReturnsTrueIfPlayerExists() {
+
+        assertTrue(controller.checkIfNameIsOnThePlayerList("aarni"));
+    }
+
+    @Test
+    public void checkIfNameIsOnThePlayerListReturnsFalseIfPlayerNotExists() {
+
+        assertFalse(controller.checkIfNameIsOnThePlayerList("hilla"));
+    }
+
+    @Test
+    public void ifPlayerIsOnTheListReturnPlayersPoints() {
+
+        assertEquals(5, controller.ifNameIsOnTheDatabaseReturnPoints("aarni"));
+
+    }
+    
+    @Test
+    public void insertNewPlayerIntoDatabaseInsertsPlayer(){
+        controller.insertNewPlayerIntoDatabase(new Player("niko", 75));
+        
+        assertEquals(75, controller.ifNameIsOnTheDatabaseReturnPoints("niko"));
+    }
 
 }
