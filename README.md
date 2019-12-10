@@ -14,7 +14,7 @@ Pelaajan tehtävänä on valita lauseisiin sopiva sana kahdesta annetusta vaihto
 
 ## Releaset
 
-[Viikko 6](linkki)
+[Viikko 6](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
 ### Testaus
