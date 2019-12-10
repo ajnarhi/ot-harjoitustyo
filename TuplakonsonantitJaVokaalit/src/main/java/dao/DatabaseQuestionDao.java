@@ -5,6 +5,7 @@
  */
 package dao;
 
+import domain.Player;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,29 @@ public class DatabaseQuestionDao implements QuestionDao {
 
         return allQuestions;
 
+    }
+
+    @Override
+    public List<Player> getPlayers() {
+        List<Player>allPlayers=new ArrayList();
+        Connection connection=null;
+        
+        try {
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection("jdbc:sqlite:questions.db");
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("select * from player");
+            while (rs.next()) {
+                Player player = new Player(rs.getString("name"), rs.getInt("points"));
+                allPlayers.add(player);
+            }
+        } catch (Exception e) {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            System.exit(0);
+        }
+        System.out.println("Opened database successfully");
+
+        return allPlayers;
     }
 
 }

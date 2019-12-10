@@ -12,9 +12,11 @@ package domain;
 public class Player {
 
     Integer points;
+    String name;
 
-    public Player(Integer points) {
+    public Player(String name, Integer points) {
         this.points = points;
+        this.name=name;
     }
 
     public int getPoints() {
@@ -31,5 +33,17 @@ public class Player {
 
         }
     }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public void setName(String name){
+        this.name=name;
+        
+    }
 
+    public void setPoints(Integer points){
+        this.points=points;
+    }
 }

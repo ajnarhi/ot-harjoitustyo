@@ -5,6 +5,7 @@
  */
 package dao;
 
+import domain.Player;
 import domain.Question;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,14 @@ public class MockQuestionDao implements QuestionDao {
         allQuestions.add(testQuestion);
         return allQuestions;
 
+    }
+
+    @Override
+    public List<Player> getPlayers() {
+        List<Player> allPlayers = new ArrayList();
+        Player testPlayer = new Player("Aarni", 5);
+        allPlayers.add(testPlayer);
+        return allPlayers;
     }
 
 }

@@ -19,27 +19,26 @@ public class Controller {
     QuestionDao database;
     Random random = new Random();
     List<Question> databaseQuestions;
+    List<Player> databasePlayers;
     Question question;
     int randomNumberForAnswers;
 
     public Controller(QuestionDao database) {
         this.database = database;
         databaseQuestions = database.getQuestions();
-        
+        databasePlayers = database.getPlayers();
 
     }
 
     public Question getRandomQuestionFromTheList() {
         return databaseQuestions.get(random.nextInt(databaseQuestions.size()));
-        
 
     }
 
     public void newRound() {
         question = getRandomQuestionFromTheList();
         randomNumberForAnswers = random.nextInt(2);
-        
-        
+
     }
 
     public String getQuestion() {
@@ -47,27 +46,54 @@ public class Controller {
     }
 
     public String getFirstAnswer() {
-        
-        if (randomNumberForAnswers==0){
+
+        if (randomNumberForAnswers == 0) {
             return question.getRightAnswer();
-            
-        }else{
+
+        } else {
             return question.getOptionalAnswer();
         }
-        
+
     }
 
     public String getSecondAnswer() {
-          if (randomNumberForAnswers==0){
+        if (randomNumberForAnswers == 0) {
             return question.getOptionalAnswer();
-            
-        }else{
+
+        } else {
             return question.getRightAnswer();
         }
     }
-    
-    public int getRandomNumber(){
+
+    public int getRandomNumber() {
         return randomNumberForAnswers;
     }
 
+    public boolean checkIfNameIsOnThePlayerList(String name) {
+        String nameLower = name.toLowerCase();
+        for (Player player : databasePlayers) {
+            String playerName = player.getName();
+            if (playerName.equals(nameLower)) {
+                return true;
+            }
+            
+        }
+        return false;
+
+    }
+    
+    public int ifNameIsOnTheDatabaseReturnPoints(String name){
+        int playerPoints=0;
+        String nameLower = name.toLowerCase();
+        
+        for (Player player : databasePlayers) {
+            String playerName = player.getName();
+            if (playerName.equals(nameLower)) {
+                playerPoints=player.getPoints();
+                
+            }
+            
+    }
+        return playerPoints;
+}
 }

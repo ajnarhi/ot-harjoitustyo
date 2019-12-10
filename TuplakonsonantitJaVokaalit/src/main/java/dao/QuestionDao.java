@@ -5,6 +5,7 @@
  */
 package dao;
 
+import domain.Player;
 import java.util.List;
 import domain.Question;
 
@@ -15,4 +16,7 @@ import domain.Question;
 public interface QuestionDao {
 
     List<Question> getQuestions();
+    List<Player> getPlayers();
+
+    
 }
