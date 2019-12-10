@@ -11,5 +11,7 @@ Päivä	|Aika	|Mitä tein
 2.12|3|Tiedon laittaminen tietokantaan ja yritys selvittää miten haku tietokannasta saadaan satunnaiseksi. Kysymysten haku satunnaistettu.
 3.12|4|Testien jatkaminen, pakettirakenteen korjaaminen ja siitä johtuvien ongelmien ratkaisu ym. viikon ohjeiden noudattaminen
 4.12|2|Vastausten paikan randomisointi
-Yhteensä|22|
+5.12|4|Pelin jatkotoimintojen suunnittelu ja käyttöliittymän uudelleenrakennus
+10.12|10|Tietokantaan kirjoitus ja käyttöliittymänrakentaminen, testien päivittäminen ja projektin muun vaaditun osion tekeminen
+Yhteensä|36|
 

@@ -20,6 +20,10 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 * ohjelma valitsee seuraavan lauseen TEHTY
 
+* ohjelma tarkistaa pelaajan tietoja tietokannasta TEHTY ja lisää uuden pelaajan jos pelaaja on uusi TEHTY ei lisää samaa pelaajaa kahta tai useampaa kertaa
+
+* ei anna pelaajan olla nimetön
+
 
 #### Jatkokehitysideat
 
