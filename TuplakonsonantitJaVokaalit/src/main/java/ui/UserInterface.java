@@ -42,7 +42,8 @@ public class UserInterface extends Application {
         //otsikot
         Label label = new Label("Harjoitellaan tuplakonsonantteja ja - vokaaleja");
         Label labelWelcome = new Label("Tervetuloa! Kirjoita nimesi ");
-        Label labelWelcomeName=new Label();
+        Label labelWelcomeName = new Label();
+        Label labelWelcomeNameForNewPlayer = new Label();
         Label labelGreat = new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints());
         Label labelWrong = new Label("Väärin. Kokeile uudestaan. Pisteesi: " + player1.getPoints());
         Label labelQuestion = new Label(controller.getQuestion());
@@ -56,25 +57,33 @@ public class UserInterface extends Application {
         Button buttonQuit1 = new Button("Lopeta");
         Button buttonQuit2 = new Button("Lopeta");
         Button nameGiven = new Button("Nimi kirjoitettu");
-        Button startNewGame=new Button("Aloita uusi peli");
-        
+        Button startNewGame = new Button("Aloita uusi peli");
+        Button startNewGame2 = new Button("Aloita uusi peli");
+
         BorderPane settingQuestion = new BorderPane();
         settingQuestion.setTop(labelQuestion);
         settingQuestion.setLeft(buttonFirstChoice);
         settingQuestion.setRight(buttonSecondChoice);
         Scene sceneQuestion = new Scene(settingQuestion);
-        
-       
-        
-        
-        BorderPane settingPlayerHasPlayedBefore = new BorderPane(); 
-        
+
+        BorderPane settingPlayerHasNotPlayedBefore = new BorderPane();
+
+        settingPlayerHasNotPlayedBefore.setTop(labelWelcomeNameForNewPlayer);
+        settingPlayerHasNotPlayedBefore.setBottom(startNewGame2);
+        Scene scenePlayerHasNotPlayedBefore = new Scene(settingPlayerHasNotPlayedBefore);
+        startNewGame2.setOnAction((event) -> {
+            window.setScene(sceneQuestion);
+
+        });
+
+        BorderPane settingPlayerHasPlayedBefore = new BorderPane();
+
         settingPlayerHasPlayedBefore.setTop(labelWelcomeName);
         settingPlayerHasPlayedBefore.setBottom(startNewGame);
         Scene scenePlayerHasPlayedBefore = new Scene(settingPlayerHasPlayedBefore);
         startNewGame.setOnAction((event) -> {
-             window.setScene(sceneQuestion);
-            
+            window.setScene(sceneQuestion);
+
         });
 
         BorderPane settingFirst = new BorderPane();
@@ -85,24 +94,24 @@ public class UserInterface extends Application {
         Scene sceneFirst = new Scene(settingFirst);
         nameGiven.setOnAction((event) -> {
             String textFieldValueName = nameText.getText();
-            
+
             if (controller.checkIfNameIsOnThePlayerList(textFieldValueName)) {
                 System.out.println("toimii");
-               player1.setName(textFieldValueName);
-               int player1points= controller.ifNameIsOnTheDatabaseReturnPoints(textFieldValueName);
-               player1.setPoints(player1points);
-               labelWelcomeName.setText("Tervetuloa " + player1.getName()+ ". Edelliset pisteesi: " + player1.getPoints()+"\nHarjoitellaan tuplakonsonantteja ja - vokaaleja");
+                player1.setName(textFieldValueName);
+                int player1points = controller.ifNameIsOnTheDatabaseReturnPoints(textFieldValueName);
+                player1.setPoints(player1points);
+                labelWelcomeName.setText("Tervetuloa takaisin " + player1.getName() + ". Edelliset pisteesi: " + player1.getPoints() + "\nHarjoitellaan tuplakonsonantteja ja - vokaaleja");
                 window.setScene(scenePlayerHasPlayedBefore);
-                
-            } else{
+
+            } else {
                 System.out.println("Ei toimi");
-
-            }});
-
-        
- 
-
-        
+                player1.setName(textFieldValueName);
+                player1.setPoints(0);
+                controller.insertNewPlayerIntoDatabase(player1);
+                labelWelcomeNameForNewPlayer.setText("Tervetuloa " + player1.getName() + ". Pisteesi nyt: " + player1.getPoints() + "\nHarjoitellaan tuplakonsonantteja ja - vokaaleja");
+                window.setScene(scenePlayerHasNotPlayedBefore);
+            }
+        });
 
         BorderPane settingRightAnswer = new BorderPane();
         settingRightAnswer.setTop(labelGreat);
@@ -149,43 +158,43 @@ public class UserInterface extends Application {
         );
 
         buttonNewQuestion1.setOnAction(
-                (event) -> {
-                    controller.newRound();
-                    labelQuestion.setText(controller.getQuestion());
-                    buttonFirstChoice.setText(controller.getFirstAnswer());
-                    buttonSecondChoice.setText(controller.getSecondAnswer());
+            (event) -> {
+                controller.newRound();
+                labelQuestion.setText(controller.getQuestion());
+                buttonFirstChoice.setText(controller.getFirstAnswer());
+                buttonSecondChoice.setText(controller.getSecondAnswer());
 
-                    window.setScene(sceneQuestion);
-                }
+                window.setScene(sceneQuestion);
+            }
         );
 
         buttonNewQuestion2.setOnAction(
-                (event) -> {
-                    controller.newRound();
-                    labelQuestion.setText(controller.getQuestion());
-                    buttonFirstChoice.setText(controller.getFirstAnswer());
-                    buttonSecondChoice.setText(controller.getSecondAnswer());
-                    window.setScene(sceneQuestion);
-                }
+            (event) -> {
+                controller.newRound();
+                labelQuestion.setText(controller.getQuestion());
+                buttonFirstChoice.setText(controller.getFirstAnswer());
+                buttonSecondChoice.setText(controller.getSecondAnswer());
+                window.setScene(sceneQuestion);
+            }
         );
 
         buttonQuit1.setOnAction(
-                (event) -> {
+            (event) -> {
 
-                    window.close();
-                }
+                window.close();
+            }
         );
 
         buttonQuit2.setOnAction(
-                (event) -> {
+            (event) -> {
 
-                    window.close();
-                }
+                window.close();
+            }
         );
-            window.setScene(sceneFirst);
+        window.setScene(sceneFirst);
 
-            window.show();
-
-        }
+        window.show();
 
     }
+
+}

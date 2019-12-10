@@ -16,7 +16,9 @@ import domain.Question;
 public interface QuestionDao {
 
     List<Question> getQuestions();
+
     List<Player> getPlayers();
 
-    
+    void insertNewPlayer(Player player);
+
 }

@@ -11,6 +11,9 @@ import java.util.ArrayList;
  *
  * @author ajnarhi
  */
+/**
+ * Luokka kertoo kysymysten ominaisuuksista
+ */
 public class Question {
 
     String question;
@@ -22,21 +25,33 @@ public class Question {
         this.rightAnswer = rightAnswer;
         this.optionalAnswer = optionalAnswer;
     }
-
+ /**
+     * Metodi palauttaa kysymykseen liittyvän oikean vastauksen.
+     *
+     *
+     *@return Palauttaa oikean vastauksen
+     */
     public String getRightAnswer() {
 
         return rightAnswer;
     }
-
+/**
+     * Metodi palauttaa kysymykseen liittyvän väärän vastauksen.
+     *
+     *
+     *@return Palauttaa väärän vastauksen
+     */
     public String getOptionalAnswer() {
         return optionalAnswer;
     }
-
+/**
+     * Metodi palauttaa kysymyksen.
+     *
+     *
+     *@return Palauttaa kysymyksen.
+     */
     public String ask() {
         return question;
     }
 
 }
-
-
-

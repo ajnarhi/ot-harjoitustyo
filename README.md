@@ -31,3 +31,12 @@ Tiedoston checkstyle.xml määrittelemät tarkistukset suoritetaan komennolla
 	mvn jxr:jxr checkstyle:checkstyle
 
 Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto target/site/checkstyle.html
+
+### Javadoc
+
+JavaDoc generoidaan  komennolla
+	
+	 mvn javadoc:javadoc
+
+JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html
+

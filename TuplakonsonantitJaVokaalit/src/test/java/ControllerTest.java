@@ -8,6 +8,7 @@ import dao.MockQuestionDao;
 import dao.QuestionDao;
 import domain.Controller;
 import domain.Question;
+import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -36,5 +37,19 @@ public class ControllerTest {
         assertEquals(controller.getQuestion(), "Tien poikki kulki <mikä?>");
 
     }
+    
+    /*@Test
+    public void getFirstAnswerGetsRightAnswerWhenRandomNumberIsZero(){
+        controller.newRound();
+        int randomNumberForAnswers=0;
+        String answer=controller.getFirstAnswer();
+        
+        assertEquals("kissa", answer);
+        
+        
+        
+    }*/
+
+  
 
 }
