@@ -1,10 +1,10 @@
-#Käyttöohje
+# Käyttöohje
 
-##Konfigurointi
+## Konfigurointi
 
-##Ohjelman käynnistäminen
+## Ohjelman käynnistäminen
 
-##Pelaaminen
+## Pelaaminen
 
 Sovellus käynnistyy näkymään, jossa voit antaa nimesi.
 
