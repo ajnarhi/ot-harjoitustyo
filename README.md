@@ -1,12 +1,20 @@
 # Ohjelmistotekniikan kurssi 2019
 ## Harjoitustyö "Tuplakonsonanttien ja - vokaalien harjoitteleminen"
 
+Sovelluksen käyttäjä eli pelaaja  voi harjoitella erilaisia lauseita, joista puuttuu sana. 
+Pelaajan tehtävänä on valita lauseisiin sopiva sana kahdesta annetusta vaihtoehdosta. Tarkoituksena on harjoitella tarkkuutta nk. tuplakonsonanttien ja tuplavokaalien käytössä.
 
 [Vaatimusmäärittely](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
 [Arkkitehtuurikuvaus](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
+
+[Käyttöhje](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
+
+## Releaset
+
+[Viikko 6](linkki)
 
 ## Komentorivitoiminnot
 ### Testaus
