@@ -13,5 +13,5 @@ Päivä	|Aika	|Mitä tein
 4.12|2|Vastausten paikan randomisointi
 5.12|4|Pelin jatkotoimintojen suunnittelu ja käyttöliittymän uudelleenrakennus
 10.12|10|Tietokantaan kirjoitus ja käyttöliittymänrakentaminen, testien päivittäminen ja projektin muun vaaditun osion tekeminen
-Yhteensä|36|
+Yhteensä|38|
 
