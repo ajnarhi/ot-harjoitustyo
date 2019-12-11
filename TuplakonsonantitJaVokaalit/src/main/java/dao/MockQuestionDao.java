@@ -65,4 +65,9 @@ public class MockQuestionDao implements QuestionDao {
         allPlayers.add(player);
     }
 
+    @Override
+    public void updatePlayersPoints(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

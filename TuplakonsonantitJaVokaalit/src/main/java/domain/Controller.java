@@ -142,7 +142,7 @@ public class Controller {
 
         for (Player player : databasePlayers) {
             String playerName = player.getName();
-            if (playerName.equals(nameLower)) {
+            if (playerName.toLowerCase().equals(nameLower)) {
                 playerPoints = player.getPoints();
 
             }
@@ -158,5 +158,9 @@ public class Controller {
      */
     public void insertNewPlayerIntoDatabase(Player player) {
         database.insertNewPlayer(player);
+    }
+    
+    public void updatePlayersPointsOnDatabase(Player player){
+        database.updatePlayersPoints(player);
     }
 }

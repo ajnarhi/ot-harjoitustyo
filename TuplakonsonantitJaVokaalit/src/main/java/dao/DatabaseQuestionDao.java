@@ -117,5 +117,24 @@ public class DatabaseQuestionDao implements QuestionDao {
         System.out.println("Inserted data to database successfully");
 
     }
+    
+    @Override
+    public void updatePlayersPoints(Player player){
+        String sql = "Update player set points=? where name=?";
 
+        PreparedStatement pstmt;
+        try {
+            Connection connection = getConnection();
+            pstmt = connection.prepareStatement(sql);
+            pstmt.setInt(1, player.getPoints());
+            pstmt.setString(2, player.getName());
+            pstmt.execute();
+            connection.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseQuestionDao.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+
+        System.out.println("Updated data to database successfully");
+
+}
 }

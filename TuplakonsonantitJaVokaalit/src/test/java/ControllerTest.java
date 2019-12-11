@@ -68,11 +68,11 @@ public class ControllerTest {
         assertEquals(5, controller.ifNameIsOnTheDatabaseReturnPoints("aarni"));
 
     }
-    
+
     @Test
-    public void insertNewPlayerIntoDatabaseInsertsPlayer(){
+    public void insertNewPlayerIntoDatabaseInsertsPlayer() {
         controller.insertNewPlayerIntoDatabase(new Player("niko", 75));
-        
+
         assertEquals(75, controller.ifNameIsOnTheDatabaseReturnPoints("niko"));
     }
 

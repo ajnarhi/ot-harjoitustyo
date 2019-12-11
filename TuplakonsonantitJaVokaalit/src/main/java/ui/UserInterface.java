@@ -180,14 +180,16 @@ public class UserInterface extends Application {
 
         buttonQuit1.setOnAction(
             (event) -> {
-
+               
+                controller.updatePlayersPointsOnDatabase(player1);
                 window.close();
             }
         );
 
         buttonQuit2.setOnAction(
             (event) -> {
-
+                
+controller.updatePlayersPointsOnDatabase(player1);
                 window.close();
             }
         );
