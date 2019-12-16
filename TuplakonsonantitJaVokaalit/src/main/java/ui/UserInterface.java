@@ -41,7 +41,7 @@ public class UserInterface extends Application {
 
         controller.newRound();
         Player player1 = new Player("", 0);
-        Admin admin=new Admin();
+        Admin admin = new Admin();
 
         window.setTitle("Harjoitus");
 
@@ -67,40 +67,62 @@ public class UserInterface extends Application {
         Button startNewGame2 = new Button("Aloita uusi peli");
         Button newQuestionToDatabase = new Button("Tallenna uusi kysymys ja vastaukset");
         Button passwordGiven = new Button("Password Given");
-        Button anotherQuestionToDatabase =new Button ("Lisää uusi kysymys");
-        Button quitAdmin =new Button ("Lopeta");
+        Button anotherQuestionToDatabase = new Button("Lisää uusi kysymys");
+        Button quitAdmin = new Button("Lopeta");
         
-        HBox settingAnotherQuestion = new HBox();
-        settingAnotherQuestion.getChildren().add(anotherQuestionToDatabase);
-        settingAnotherQuestion.getChildren().add(quitAdmin);
-        Scene sceneAnotherQuestion =new Scene (settingAnotherQuestion);
-        anotherQuestionToDatabase.setOnAction((event) -> {
-            
-            window.close();//tähän pitäisi laittaa window.setScene(sceneAdmin); mutta se on tuossa alla. Miten sen saisi oikeaan paikkaan?
-        });
-        quitAdmin.setOnAction((event) -> {
-            
-            window.close();
-        });
         
-
-        VBox settingAdmin = new VBox();
+          
+           VBox settingAdmin = new VBox(10);
+        HBox settingAdminQuestion=new HBox(10);
+        HBox settingAdminRight=new HBox(10);
+        HBox settingAdminOptional=new HBox(10);
+        Label labelAdminQuestion = new Label("Harjoituskysymys");
+        Label labelAdminRight = new Label("Oikea vastaus");
+        Label labelAdminOptional = new Label("Väärä vastaus");
         TextField questionText = new TextField();
         TextField rightAnswerText = new TextField();
         TextField optionalAnswerText = new TextField();
-        settingAdmin.getChildren().add(questionText);
-        settingAdmin.getChildren().add(rightAnswerText);
-        settingAdmin.getChildren().add(optionalAnswerText);
+        settingAdminQuestion.getChildren().addAll(labelAdminQuestion,questionText);
+                
+        settingAdminRight.getChildren().addAll(labelAdminRight,rightAnswerText);
+       
+        
+        settingAdminOptional.getChildren().addAll(labelAdminOptional,optionalAnswerText);
+        
+        
+        settingAdmin.getChildren().add(settingAdminQuestion);
+        settingAdmin.getChildren().add(settingAdminRight);
+        settingAdmin.getChildren().add(settingAdminOptional);
         settingAdmin.getChildren().add(newQuestionToDatabase);
         Scene sceneAdmin = new Scene(settingAdmin);
+
+        HBox settingAnotherQuestion = new HBox();
+        settingAnotherQuestion.getChildren().add(anotherQuestionToDatabase);
+        settingAnotherQuestion.getChildren().add(quitAdmin);
+        Scene sceneAnotherQuestion = new Scene(settingAnotherQuestion);
+        anotherQuestionToDatabase.setOnAction((event) -> {
+
+            window.setScene(sceneAdmin); 
+        });
+        quitAdmin.setOnAction((event) -> {
+
+            window.close();
+        });
+
+      
         newQuestionToDatabase.setOnAction((event) -> {
             String textFieldValueQuestion = questionText.getText();
             String textFieldValueRightAnswer = rightAnswerText.getText().toLowerCase();
             String textFieldValueOptionalAnswer = optionalAnswerText.getText().toLowerCase();
             Question databaseNewQuestion = new Question(textFieldValueQuestion, textFieldValueRightAnswer, textFieldValueOptionalAnswer);
             controller.insertNewQuestionIntoDatabase(databaseNewQuestion);
+            questionText.clear();
+            rightAnswerText.clear();
+            optionalAnswerText.clear();
             window.setScene(sceneAnotherQuestion);
         });
+       
+      
 
         HBox settingPassword = new HBox();
         PasswordField passwordField = new PasswordField();
@@ -123,7 +145,6 @@ public class UserInterface extends Application {
         Scene sceneQuestion = new Scene(settingQuestion);
 
         BorderPane settingPlayerHasNotPlayedBefore = new BorderPane();
-
         settingPlayerHasNotPlayedBefore.setTop(labelWelcomeNameForNewPlayer);
         settingPlayerHasNotPlayedBefore.setBottom(startNewGame2);
         Scene scenePlayerHasNotPlayedBefore = new Scene(settingPlayerHasNotPlayedBefore);
@@ -133,7 +154,6 @@ public class UserInterface extends Application {
         });
 
         BorderPane settingPlayerHasPlayedBefore = new BorderPane();
-
         settingPlayerHasPlayedBefore.setTop(labelWelcomeName);
         settingPlayerHasPlayedBefore.setBottom(startNewGame);
         Scene scenePlayerHasPlayedBefore = new Scene(settingPlayerHasPlayedBefore);
