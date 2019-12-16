@@ -61,6 +61,27 @@ public class DatabaseQuestionDao implements QuestionDao {
         return allQuestions;
 
     }
+       @Override
+    public void insertNewQuestion(Question question) {
+
+        String sql = "INSERT INTO questions(question,rightAnswer,optionalAnswer) VALUES(?,?,?)";
+
+        PreparedStatement pstmt;
+        try {
+            Connection connection = getConnection();
+            pstmt = connection.prepareStatement(sql);
+            pstmt.setString(1, question.ask());
+            pstmt.setString(2, question.getRightAnswer());
+            pstmt.setString(3, question.getOptionalAnswer());
+            pstmt.execute();
+            connection.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatabaseQuestionDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        System.out.println("Inserted question to database successfully");
+
+    }
 /**
      * Metodi palauttaa tietokannasta pelaajat ja heidän edellisen kierroksen pisteensä listana.
      *
@@ -106,7 +127,7 @@ public class DatabaseQuestionDao implements QuestionDao {
         try {
             Connection connection = getConnection();
             pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, player.getName());
+            pstmt.setString(1, player.getName().toLowerCase());
             pstmt.setInt(2, player.getPoints());
             pstmt.execute();
             connection.close();
@@ -127,7 +148,7 @@ public class DatabaseQuestionDao implements QuestionDao {
             Connection connection = getConnection();
             pstmt = connection.prepareStatement(sql);
             pstmt.setInt(1, player.getPoints());
-            pstmt.setString(2, player.getName());
+            pstmt.setString(2, player.getName().toLowerCase());
             pstmt.execute();
             connection.close();
         } catch (SQLException ex) {

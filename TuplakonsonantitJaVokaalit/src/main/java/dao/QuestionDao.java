@@ -19,8 +19,10 @@ public interface QuestionDao {
 
     List<Player> getPlayers();
 
+    void insertNewQuestion(Question question);
+
     void insertNewPlayer(Player player);
-    
+
     void updatePlayersPoints(Player player);
 
 }

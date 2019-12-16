@@ -163,4 +163,8 @@ public class Controller {
     public void updatePlayersPointsOnDatabase(Player player){
         database.updatePlayersPoints(player);
     }
+    
+    public void insertNewQuestionIntoDatabase(Question question){
+        database.insertNewQuestion(question);
+    }
 }

@@ -6,6 +6,7 @@
 package ui;
 
 import dao.DatabaseQuestionDao;
+import domain.Admin;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -19,9 +20,13 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import domain.Controller;
 import domain.Player;
+import domain.Question;
 import java.awt.event.ActionListener;
 import javafx.event.ActionEvent;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  *
@@ -36,12 +41,13 @@ public class UserInterface extends Application {
 
         controller.newRound();
         Player player1 = new Player("", 0);
+        Admin admin=new Admin();
 
         window.setTitle("Harjoitus");
 
         //otsikot
         Label label = new Label("Harjoitellaan tuplakonsonantteja ja - vokaaleja");
-        Label labelWelcome = new Label("Tervetuloa! Kirjoita nimesi ");
+        Label labelWelcome = new Label("Tervetuloa! Kirjoita nimesi. \nNimi ei voi olla tyhjä ");
         Label labelWelcomeName = new Label();
         Label labelWelcomeNameForNewPlayer = new Label();
         Label labelGreat = new Label("Oikein! Hienoa. Pisteesi: " + player1.getPoints());
@@ -59,6 +65,56 @@ public class UserInterface extends Application {
         Button nameGiven = new Button("Nimi kirjoitettu");
         Button startNewGame = new Button("Aloita uusi peli");
         Button startNewGame2 = new Button("Aloita uusi peli");
+        Button newQuestionToDatabase = new Button("Tallenna uusi kysymys ja vastaukset");
+        Button passwordGiven = new Button("Password Given");
+        Button anotherQuestionToDatabase =new Button ("Lisää uusi kysymys");
+        Button quitAdmin =new Button ("Lopeta");
+        
+        HBox settingAnotherQuestion = new HBox();
+        settingAnotherQuestion.getChildren().add(anotherQuestionToDatabase);
+        settingAnotherQuestion.getChildren().add(quitAdmin);
+        Scene sceneAnotherQuestion =new Scene (settingAnotherQuestion);
+        anotherQuestionToDatabase.setOnAction((event) -> {
+            
+            window.close();//tähän pitäisi laittaa window.setScene(sceneAdmin); mutta se on tuossa alla. Miten sen saisi oikeaan paikkaan?
+        });
+        quitAdmin.setOnAction((event) -> {
+            
+            window.close();
+        });
+        
+
+        VBox settingAdmin = new VBox();
+        TextField questionText = new TextField();
+        TextField rightAnswerText = new TextField();
+        TextField optionalAnswerText = new TextField();
+        settingAdmin.getChildren().add(questionText);
+        settingAdmin.getChildren().add(rightAnswerText);
+        settingAdmin.getChildren().add(optionalAnswerText);
+        settingAdmin.getChildren().add(newQuestionToDatabase);
+        Scene sceneAdmin = new Scene(settingAdmin);
+        newQuestionToDatabase.setOnAction((event) -> {
+            String textFieldValueQuestion = questionText.getText();
+            String textFieldValueRightAnswer = rightAnswerText.getText().toLowerCase();
+            String textFieldValueOptionalAnswer = optionalAnswerText.getText().toLowerCase();
+            Question databaseNewQuestion = new Question(textFieldValueQuestion, textFieldValueRightAnswer, textFieldValueOptionalAnswer);
+            controller.insertNewQuestionIntoDatabase(databaseNewQuestion);
+            window.setScene(sceneAnotherQuestion);
+        });
+
+        HBox settingPassword = new HBox();
+        PasswordField passwordField = new PasswordField();
+        passwordField.setPromptText("Admin password");
+        settingPassword.getChildren().add(passwordField);
+        settingPassword.getChildren().add(passwordGiven);
+        Scene scenePassword = new Scene(settingPassword);
+        passwordGiven.setOnAction((event) -> {
+            String textFieldValuePassword = passwordField.getText();
+            if (textFieldValuePassword.equals(admin.getPassword())) {
+                window.setScene(sceneAdmin);
+            }
+
+        });
 
         BorderPane settingQuestion = new BorderPane();
         settingQuestion.setTop(labelQuestion);
@@ -82,6 +138,8 @@ public class UserInterface extends Application {
         settingPlayerHasPlayedBefore.setBottom(startNewGame);
         Scene scenePlayerHasPlayedBefore = new Scene(settingPlayerHasPlayedBefore);
         startNewGame.setOnAction((event) -> {
+            player1.setPoints(0);
+
             window.setScene(sceneQuestion);
 
         });
@@ -94,8 +152,12 @@ public class UserInterface extends Application {
         Scene sceneFirst = new Scene(settingFirst);
         nameGiven.setOnAction((event) -> {
             String textFieldValueName = nameText.getText();
-
-            if (controller.checkIfNameIsOnThePlayerList(textFieldValueName)) {
+            if (textFieldValueName.equals("")) {
+                System.out.println("tyhjä annettu");
+            } else if (textFieldValueName.equals("admin") || textFieldValueName.equals("Admin")) {
+                System.out.println("Admin annettu");
+                window.setScene(scenePassword);
+            } else if (controller.checkIfNameIsOnThePlayerList(textFieldValueName)) {
                 System.out.println("toimii");
                 player1.setName(textFieldValueName);
                 int player1points = controller.ifNameIsOnTheDatabaseReturnPoints(textFieldValueName);
@@ -158,40 +220,40 @@ public class UserInterface extends Application {
         );
 
         buttonNewQuestion1.setOnAction(
-            (event) -> {
-                controller.newRound();
-                labelQuestion.setText(controller.getQuestion());
-                buttonFirstChoice.setText(controller.getFirstAnswer());
-                buttonSecondChoice.setText(controller.getSecondAnswer());
+                (event) -> {
+                    controller.newRound();
+                    labelQuestion.setText(controller.getQuestion());
+                    buttonFirstChoice.setText(controller.getFirstAnswer());
+                    buttonSecondChoice.setText(controller.getSecondAnswer());
 
-                window.setScene(sceneQuestion);
-            }
+                    window.setScene(sceneQuestion);
+                }
         );
 
         buttonNewQuestion2.setOnAction(
-            (event) -> {
-                controller.newRound();
-                labelQuestion.setText(controller.getQuestion());
-                buttonFirstChoice.setText(controller.getFirstAnswer());
-                buttonSecondChoice.setText(controller.getSecondAnswer());
-                window.setScene(sceneQuestion);
-            }
+                (event) -> {
+                    controller.newRound();
+                    labelQuestion.setText(controller.getQuestion());
+                    buttonFirstChoice.setText(controller.getFirstAnswer());
+                    buttonSecondChoice.setText(controller.getSecondAnswer());
+                    window.setScene(sceneQuestion);
+                }
         );
 
         buttonQuit1.setOnAction(
-            (event) -> {
-               
-                controller.updatePlayersPointsOnDatabase(player1);
-                window.close();
-            }
+                (event) -> {
+
+                    controller.updatePlayersPointsOnDatabase(player1);
+                    window.close();
+                }
         );
 
         buttonQuit2.setOnAction(
-            (event) -> {
-                
-controller.updatePlayersPointsOnDatabase(player1);
-                window.close();
-            }
+                (event) -> {
+
+                    controller.updatePlayersPointsOnDatabase(player1);
+                    window.close();
+                }
         );
         window.setScene(sceneFirst);
 
