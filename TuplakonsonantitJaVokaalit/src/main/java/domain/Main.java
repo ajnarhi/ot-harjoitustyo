@@ -12,7 +12,7 @@ import javafx.application.Application;
  *
  * @author ajnarhi
  */
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         Application.launch(UserInterface.class);
