@@ -13,5 +13,9 @@ Päivä	|Aika	|Mitä tein
 4.12|2|Vastausten paikan randomisointi
 5.12|4|Pelin jatkotoimintojen suunnittelu ja käyttöliittymän uudelleenrakennus
 10.12|10|Tietokantaan kirjoitus ja käyttöliittymänrakentaminen, testien päivittäminen ja projektin muun vaaditun osion tekeminen
-Yhteensä|38|
+11.12|4|Virheen etsintää koodista
+15.12|1|Admin ominaisuuden rakentelua
+16.12|5|Admin ominaisuuden jatkaminen ja käyttöliittymän rakentaminen
+
+Yhteensä|48|
 

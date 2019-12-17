@@ -21,14 +21,27 @@ import java.util.logging.Logger;
  * Luokka hakee tietoa ja kirjoittaa tietoa SqLite tietokantaan
  */
 public class DatabaseQuestionDao implements QuestionDao {
+    
+    String databaseName;
+    
+    public DatabaseQuestionDao(String databaseName){
+        this.databaseName=databaseName; 
+    }
 
     public Connection getConnection() throws SQLException {
         try {
             Class.forName("org.sqlite.JDBC");
+            
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DatabaseQuestionDao.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return DriverManager.getConnection("jdbc:sqlite:questions.db");
+        
+        Connection connection=DriverManager.getConnection("jdbc:sqlite:"+ databaseName);
+        String sql = "CREATE TABLE IF NOT EXISTS questions (question STRING, rightAnswer STRING, optionalAnswer STRING)";
+        PreparedStatement pstmt = connection.prepareStatement(sql);
+        pstmt.execute();
+        
+        return connection;
     }
 /**
      * Metodi palauttaa tietokannasta kysymykset vastausvaihtoehtoineen listana.

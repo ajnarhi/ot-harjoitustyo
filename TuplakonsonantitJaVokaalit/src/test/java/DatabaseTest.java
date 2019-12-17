@@ -5,6 +5,8 @@
  */
 
 import dao.DatabaseQuestionDao;
+import domain.Question;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,29 +20,22 @@ import static org.junit.Assert.*;
  */
 public class DatabaseTest {
     
-    public DatabaseTest() {
-    }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+    DatabaseQuestionDao test;
     
     @Before
     public void setUp() {
-        DatabaseQuestionDao test=new DatabaseQuestionDao("test.db");
+    test=new DatabaseQuestionDao("test.db");
     }
     
-    @After
-    public void tearDown() {
+    @Test
+    public void insertNewQuestionWorks(){
+        Question question=new Question("Tämä on testikysymys", "vastaus", "vastaus2");
+        test.insertNewQuestion(question);
+        List<Question>questionList=test.getQuestions();
+        Question firstQuestion=questionList.get(0);
+        assertEquals("Tämä on testikysymys", firstQuestion.ask());
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+   
 }
