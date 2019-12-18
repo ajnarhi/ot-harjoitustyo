@@ -17,6 +17,7 @@ Pelaajan tehtävänä on valita lauseisiin sopiva sana kahdesta annetusta vaihto
 ## Releaset
 
 [Viikko 6](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/viikko6)
+
 [Loppupalautus](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Komentorivitoiminnot
@@ -44,7 +45,7 @@ Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jac
 
 ### Checkstyle
 
-Tiedoston checkstyle.xml määrittelemät tarkistukset suoritetaan komennolla
+Ohjelman tyylivirheet tarkistetaan komennolla
  
 	mvn jxr:jxr checkstyle:checkstyle
 
@@ -52,7 +53,7 @@ Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto target/si
 
 ### Javadoc
 
-JavaDoc generoidaan  komennolla
+JavaDoc generoidaan komennolla
 	
 	 mvn javadoc:javadoc
 
