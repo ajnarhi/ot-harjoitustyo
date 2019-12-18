@@ -20,11 +20,13 @@ import java.util.List;
 public class MockQuestionDao implements QuestionDao {
 
     List<Player> allPlayers;
+    List<Question>allQuestions;
 
     public MockQuestionDao() {
         allPlayers = new ArrayList();
         Player testPlayer = new Player("aarni", 5);
         allPlayers.add(testPlayer);
+        allQuestions=new ArrayList();
     }
 
     /**
@@ -35,7 +37,7 @@ public class MockQuestionDao implements QuestionDao {
      */
     @Override
     public List<Question> getQuestions() {
-        List<Question> allQuestions = new ArrayList();
+        
         Question testQuestion = new Question("Tien poikki kulki <mikä?>", "kissa", "kisa");
         allQuestions.add(testQuestion);
         return allQuestions;
@@ -67,12 +69,14 @@ public class MockQuestionDao implements QuestionDao {
 
     @Override
     public void updatePlayersPoints(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        player.setPoints(7);
     }
 
     @Override
     public void insertNewQuestion(Question question) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        allQuestions.clear();
+        allQuestions.add(question);
+       
     }
 
 }

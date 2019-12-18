@@ -154,7 +154,7 @@ public class Controller {
     /**
      * Metodi siirtää uuden pelaajan tiedot tietokantaan.
      *
-     * @param Syötteenä pelaaja, jolla nimi ja pisteet
+     * Syötteenä pelaaja, jolla nimi ja pisteet
      */
     public void insertNewPlayerIntoDatabase(Player player) {
         database.insertNewPlayer(player);

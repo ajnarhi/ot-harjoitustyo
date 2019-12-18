@@ -37,9 +37,12 @@ public class DatabaseQuestionDao implements QuestionDao {
         }
         
         Connection connection=DriverManager.getConnection("jdbc:sqlite:"+ databaseName);
-        String sql = "CREATE TABLE IF NOT EXISTS questions (question STRING, rightAnswer STRING, optionalAnswer STRING)";
+        String sql = "CREATE TABLE IF NOT EXISTS questions(question STRING, rightAnswer STRING, optionalAnswer STRING);";
+        String sql1= "CREATE TABLE IF NOT EXISTS player(name STRING, points INTEGER);";
         PreparedStatement pstmt = connection.prepareStatement(sql);
+        PreparedStatement pstmt1 = connection.prepareStatement(sql1);
         pstmt.execute();
+        pstmt1.execute();
         
         return connection;
     }

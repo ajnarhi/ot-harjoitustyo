@@ -9,6 +9,7 @@ import dao.QuestionDao;
 import domain.Controller;
 import domain.Player;
 import domain.Question;
+import java.util.List;
 import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -75,5 +76,25 @@ public class ControllerTest {
 
         assertEquals(75, controller.ifNameIsOnTheDatabaseReturnPoints("niko"));
     }
+    
+    @Test
+    public void insertNewQuestionIntoDatabaseInsertsNewQuestion(){
+      
+        controller.insertNewQuestionIntoDatabase(new Question("Testikysymys", "vastaus1", "vastaus2"));
+        
+        Question questionWithAnswers=controller.getRandomQuestionFromTheList();
+        String onlyQuestion = questionWithAnswers.ask();
+      
+        
+        assertEquals("Testikysymys", onlyQuestion);
+    }
 
+    
+    @Test
+    public void updatePointsWorks(){
+        Player player=new Player("aarni",5);
+        controller.updatePlayersPointsOnDatabase(player);
+        
+        assertEquals(7, player.getPoints());
+    }
 }
