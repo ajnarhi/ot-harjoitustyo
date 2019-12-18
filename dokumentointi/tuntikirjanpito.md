@@ -17,6 +17,6 @@ Päivä	|Aika	|Mitä tein
 15.12|1|Admin ominaisuuden rakentelua
 16.12|5|Admin ominaisuuden jatkaminen ja käyttöliittymän rakentaminen
 17.12|8|Tietokantatestien jatkaminen, yleinen säätö ja dokumentoinnin parantaminen
-18.12||Viimeiset testit ja dokumentointi
-Yhteensä|56|
+18.12|7|Viimeiset testit ja dokumentointi
+Yhteensä|63|
 
