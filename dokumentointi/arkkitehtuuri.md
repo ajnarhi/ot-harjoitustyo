@@ -4,7 +4,7 @@
 
 Ohjelman rakenne noudattelee kolmitasoista kerrosarkkitehtuuria. Koodin pakkausrakenne on seuraava: 
 
-![Alustava pakkausrakenne](pakkauskaavio.jpg)
+![Alustava pakkausrakenne] (pakkauskaavio.jpg)
 
 Pakkaus *ui* sisältää JavaFX:llä toteutetun käyttöliittymän *domain* sovelluslogiikan ja *dao* tietokantatalletuksesta vastaavan koodin. 
 
