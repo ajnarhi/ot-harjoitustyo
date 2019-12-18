@@ -30,7 +30,7 @@ Käyttöliittymä pääasiassa vain rakentaa näkymiä ja käyttää Controller 
 
 Sovelluksen loogiikan muodostavat luokat Player ja Question, jotka kuvaavat pääkäyttäjää, pelaajaa ja pelaajalle esitettäviä kysymyksiä:
 
-![Alustava luokkakaavio](luokkakaavio.jpg)
+![Alustava luokkakaavio](luokkakaavio_loppu.JPG)
 
 Käyttöliittymän toiminnallisuuksista vastaa luokka Controller, joka pääsee käsiksi tietokannan tietoihin QuestionDao rajapinnan avulla.
 
