@@ -10,26 +10,34 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 #### Suunnitellut toiminnallisuudet
 
-* käyttäjä saa nähtäväkseen yksinkertaisen lauseen, josta puuttuu yksi sana TEHTY
+* Käyttäjä voi kirjoittaa nimekseen "Admin", jolloin kysytään salasanaa. Tällöin avautuu pääkäyttäjän näkymä.
 
-* käyttäjä valitsee kahdesta sanavaihtoehdosta omasta mielestään oikean sanan tyhjään kohtaan TEHTY
+* Pääkäyttäjän näkymässä voidaan tallentaa kysymyksiä ja niihin liittyviä vastausvaihtoehtoja tietokantaan.
 
-* käyttäjä hyväksyy vaihtoehdon TEHTY
+* Käyttäjä kirjoittaa nimensä, jolloin tarkistetaan, onko pelaaja pelannut aiemmin ja näytetään edellisen kierroksen pisteet. Pelaaja ei voi olla nimetön. 
 
-* ohjelma kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon TEHTY tai seuraavan lauseen TEHTY  
+* Käyttäjä saa nähtäväkseen yksinkertaisen lauseen, josta puuttuu yksi sana 
 
-* ohjelma valitsee seuraavan lauseen TEHTY
+* Käyttäjä valitsee kahdesta sanavaihtoehdosta omasta mielestään oikean sanan tyhjään kohtaan 
 
-* ohjelma tarkistaa pelaajan tietoja tietokannasta TEHTY ja lisää uuden pelaajan jos pelaaja on uusi TEHTY ei lisää samaa pelaajaa kahta tai useampaa kertaa
+* Käyttäjä hyväksyy vaihtoehdon painamalla nappia
 
-* ei anna pelaajan olla nimetön
+* Sovellus kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon tai seuraavan lauseen  
+
+* Sovellus valitsee seuraavan lauseen 
+
+* Sovellus tarkistaa pelaajan tietoja tietokannasta ja lisää uuden pelaajan jos pelaaja on uusi, mutta ei lisää samaa pelaajaa toiste
+
+* Sovellus päivittää aiemmin pelanneen pelaajan pistetiedot tietokantaan
+
+
 
 
 #### Jatkokehitysideat
 
 
-* ohjelmaa voi laajentaa kattamaan erilaisia kielioppiin liittyviä aiheita
+* Ohjelmaa voi laajentaa kattamaan erilaisia kielioppiin liittyviä aiheita
 
-* ohjelmaan voidaan lisätä kirjautuminen
+* Ohjelmaan voidaan lisätä kirjautuminen kaikille käytäjille
 
-* eri käyttäjien kehityksen seuraaminen ja tehtävien vaikeuttaminen kehityksen mukaisesti
+* Eri käyttäjien kehityksen seuraaminen ja tehtävien vaikeuttaminen kehityksen mukaisesti

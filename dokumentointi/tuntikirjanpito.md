@@ -16,6 +16,7 @@ Päivä	|Aika	|Mitä tein
 11.12|4|Virheen etsintää koodista
 15.12|1|Admin ominaisuuden rakentelua
 16.12|5|Admin ominaisuuden jatkaminen ja käyttöliittymän rakentaminen
+17.12|8|Tietokantatestien jatkaminen, yleinen säätö ja dokumentoinnin parantaminen
 
-Yhteensä|48|
+Yhteensä|56|
 
