@@ -32,6 +32,9 @@ Testikattavuusraportti luodaan komennolla
 
 	mvn jacoco:report
 
+Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html
+
+
 ### Suoritettavan jarin generointi
 
 Jar saadaan komennolla 
@@ -39,8 +42,6 @@ Jar saadaan komennolla
 	mvn package
 
 Tämän jälkeen hakemistosta *target* saadaan suoritettava jar-tiedosto TuplakonsonantitJaVokaalit-1.0-SNAPSHOT.jar
-
-Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html
 
 
 ### Checkstyle
