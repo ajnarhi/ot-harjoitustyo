@@ -7,7 +7,7 @@ Ohjelmaan on rakennettu JUnit testiosia, jotka tarkistavat ohjelman toimivuutta.
 
 ### Sovelluslogiikka
 
-Sovelluslogiikkaa eli pakkausta [domain]() testaavat testiluokat[AdminTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/AdminTest.java), [PlayerTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/PlayerTest.java), [QuestionTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/QuestionTest.java) ja  [ControllerTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/ControllerTest.java). 
+Sovelluslogiikkaa eli pakkausta [domain](https://github.com/ajnarhi/ot-harjoitustyo/tree/master/TuplakonsonantitJaVokaalit/src/main/java/domain) testaavat testiluokat [AdminTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/AdminTest.java), [PlayerTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/PlayerTest.java), [QuestionTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/QuestionTest.java) ja  [ControllerTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/ControllerTest.java). 
 
 Tietokantatoiminto pakkauksen [dao](https://github.com/ajnarhi/ot-harjoitustyo/tree/master/TuplakonsonantitJaVokaalit/src/main/java/dao) sisällä olevaa luokkaa [DataBaseQuestionDao](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/main/java/dao/DatabaseQuestionDao.java) testaa testiluokka [DatabaseTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/DatabaseTest.java).
 
@@ -20,7 +20,7 @@ Käyttöliittymätoimintoja ei testata.
 
 Testauksen rivikattavuus on 80 % ja haarautumakattavuus 88 %.
 
-Testaamatta jäivät tilanteet luokassa Controller, joissa tarvittiin randomisointia. ControllerTest luokka arpoo alussa luvuista 0 ja 1 toisen, jonka perusteella testit tehdään. Näin ollen molemmat luvut tulevat todennäköisesti useammalla testikierroksella testattua, mutta tämä ei näy testikattavuusraportissa luokan täytenä testausprosenttina.
+Testaamatta jäivät tilanteet luokassa [Controller](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/main/java/domain/Controller.java), joissa tarvittiin randomisointia. [ControllerTest](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/TuplakonsonantitJaVokaalit/src/test/java/ControllerTest.java) luokka arpoo alussa luvuista 0 ja 1 toisen, jonka perusteella testit tehdään. Näin ollen molemmat luvut tulevat todennäköisesti useammalla testikierroksella testattua, mutta tämä ei näy testikattavuusraportissa luokan täytenä testausprosenttina.
 
 Tietokantatestauksista jäivät tekemättä poikkeustapausten testit eli tilanteet, joissa havaitaan jokin vääryys. Nämä jäivät testaamatta, koska ohjelmoijalta loppuivat taito ja aika.
 

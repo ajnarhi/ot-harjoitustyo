@@ -12,9 +12,12 @@ Pelaajan tehtävänä on valita lauseisiin sopiva sana kahdesta annetusta vaihto
 
 [Käyttöhje](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
 
+[Testausdokumentti](https://github.com/ajnarhi/ot-harjoitustyo/blob/master/dokumentointi/testausdokumentti.md)
+
 ## Releaset
 
 [Viikko 6](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/viikko6)
+[Loppupalautus]  PUUTTUU
 
 ## Komentorivitoiminnot
 ### Testaus
