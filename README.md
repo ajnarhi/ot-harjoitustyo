@@ -17,7 +17,7 @@ Pelaajan tehtävänä on valita lauseisiin sopiva sana kahdesta annetusta vaihto
 ## Releaset
 
 [Viikko 6](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/viikko6)
-[Loppupalautus]  PUUTTUU
+[Loppupalautus](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Komentorivitoiminnot
 ### Testaus
@@ -31,6 +31,13 @@ Testikattavuusraportti luodaan komennolla
 
 	mvn jacoco:report
 
+### Suoritettavan jarin generointi
+
+Jar saadaan komennolla 
+
+	mvn package
+
+Tämän jälkeen hakemistosta *target* saadaan suoritettava jar-tiedosto TuplakonsonantitJaVokaalit-1.0-SNAPSHOT.jar
 
 Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto target/site/jacoco/index.html
 
