@@ -12,15 +12,15 @@ Pakkaus *ui* sisältää JavaFX:llä toteutetun käyttöliittymän *domain* sove
 
 Käyttöliittymä sisältää 
 
-	1. Tervetulonäkymä, johon kirjoitetaan joko nimi tai admin
-	2. Adminin salasanakyselynäkymä
-	3. Admin tunnuksilla toimiva kysymysten syöttäminen tietokantaan 
-	4. Näkymä jossa mahdollisuus päättää lisääkö lisää kysymyksiä vai lopettaako ohjelman
-	5. Näkymä, jossa toivotetaan uusi pelaaja tervetulleeksi ja aloitetaan peli
-	6. Näkymä, jossa toivotetaan vanha pelaaja tervetulleeksi ja aloitetaan peli
-	7. Näkymä, jossa on kysymys ja vaihtoehdot
-	8. Näkymä, jossa annetaan palautetta tehtävän oikeasta ratkaisusta ja tarjotaan mahdollisuutta jatkaa seuraavaan kysymykseen tai lopettaa peli
-	9. Näkymä, jossa annetaan palautetta tehtävän väärästä ratkaisusta ja tarjotaan mahdollisuutta jatkaa seuraavaan kysymykseen tai lopettaa peli
+1. Tervetulonäkymä, johon kirjoitetaan joko nimi tai admin
+2. Adminin salasanakyselynäkymä
+3. Admin tunnuksilla toimiva kysymysten syöttäminen tietokantaan 
+4. Näkymä jossa mahdollisuus päättää lisääkö lisää kysymyksiä vai lopettaako ohjelman
+5. Näkymä, jossa toivotetaan uusi pelaaja tervetulleeksi ja aloitetaan peli
+6. Näkymä, jossa toivotetaan vanha pelaaja tervetulleeksi ja aloitetaan peli
+7. Näkymä, jossa on kysymys ja vaihtoehdot
+8. Näkymä, jossa annetaan palautetta tehtävän oikeasta ratkaisusta ja tarjotaan mahdollisuutta jatkaa seuraavaan kysymykseen tai lopettaa peli
+9. Näkymä, jossa annetaan palautetta tehtävän väärästä ratkaisusta ja tarjotaan mahdollisuutta jatkaa seuraavaan kysymykseen tai lopettaa peli
 
 Jokainen näkymä on toteutettu omana Scene-oliona. Jokainen näkymä on yksi kerrallaan näkyvää eli sijoitettuna sovelluksen stageen. Käyttöliittymä on rakennettu ohjelmallisesti luokassa ui.UserInterface.
 
