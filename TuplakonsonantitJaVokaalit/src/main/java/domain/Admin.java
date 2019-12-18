@@ -9,18 +9,26 @@ package domain;
  *
  * @author ajnarhi
  */
+/**
+ * Luokka kertoo Adminin ominaisuuksista
+ */
 public class Admin {
-    
+
     String password;
+
     
-    public Admin(){
-    this.password="1234";
-}
-    
-    public String getPassword(){
-    return password;
-}
-   
-    
-    
+    public Admin() {
+        this.password = "1234";
+    }
+
+     /**
+     * Metodi palauttaa adminin salasanan Stringinä.
+     *
+     *
+     *@return Palauttaa salasanan
+     */
+    public String getPassword() {
+        return password;
+    }
+
 }

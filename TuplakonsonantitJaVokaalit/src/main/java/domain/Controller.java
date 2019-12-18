@@ -154,17 +154,25 @@ public class Controller {
     /**
      * Metodi siirtää uuden pelaajan tiedot tietokantaan.
      *
-     * Syötteenä pelaaja, jolla nimi ja pisteet
+     * @param player Syötteenä pelaaja, jolla nimi ja pisteet
      */
     public void insertNewPlayerIntoDatabase(Player player) {
         database.insertNewPlayer(player);
     }
-    
-    public void updatePlayersPointsOnDatabase(Player player){
+/**
+     * Metodi päivittää pelaajan pisteet tietokantaan.
+     *
+     * @param player Syötteenä pelaaja, jolla nimi ja pisteet
+     */
+    public void updatePlayersPointsOnDatabase(Player player) {
         database.updatePlayersPoints(player);
     }
-    
-    public void insertNewQuestionIntoDatabase(Question question){
+/**
+     * Metodi tallentaa uuden kysymyksen tietokantaan
+     *
+     * @param question Syötteenä kysymys.
+     */
+    public void insertNewQuestionIntoDatabase(Question question) {
         database.insertNewQuestion(question);
     }
 }

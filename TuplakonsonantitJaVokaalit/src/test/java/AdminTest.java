@@ -17,19 +17,17 @@ import static org.junit.Assert.*;
  * @author ajnarhi
  */
 public class AdminTest {
-    
+
     Admin admin;
-    
-    
-    
+
     @Before
     public void setUp() {
-        
-        admin=new Admin();
+
+        admin = new Admin();
     }
-    
-  @Test
-  public void getPasswordReturnsPassword(){
-      assertEquals("1234",admin.getPassword());
-  }
+
+    @Test
+    public void getPasswordReturnsPassword() {
+        assertEquals("1234", admin.getPassword());
+    }
 }

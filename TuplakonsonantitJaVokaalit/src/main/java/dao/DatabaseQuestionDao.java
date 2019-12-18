@@ -21,36 +21,42 @@ import java.util.logging.Logger;
  * Luokka hakee tietoa ja kirjoittaa tietoa SqLite tietokantaan
  */
 public class DatabaseQuestionDao implements QuestionDao {
-    
+
     String databaseName;
-    
-    public DatabaseQuestionDao(String databaseName){
-        this.databaseName=databaseName; 
+
+    public DatabaseQuestionDao(String databaseName) {
+        this.databaseName = databaseName;
     }
 
+    /**
+     * Metodi ottaa yhteyden tietokantaan ja luo sinne tauluja jos niitä ei
+     * vielä ole siellä return palauttaa yhteyden
+     */
     public Connection getConnection() throws SQLException {
         try {
             Class.forName("org.sqlite.JDBC");
-            
+
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(DatabaseQuestionDao.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        Connection connection=DriverManager.getConnection("jdbc:sqlite:"+ databaseName);
+
+        Connection connection = DriverManager.getConnection("jdbc:sqlite:" + databaseName);
         String sql = "CREATE TABLE IF NOT EXISTS questions(question STRING, rightAnswer STRING, optionalAnswer STRING);";
-        String sql1= "CREATE TABLE IF NOT EXISTS player(name STRING, points INTEGER);";
+        String sql1 = "CREATE TABLE IF NOT EXISTS player(name STRING, points INTEGER);";
         PreparedStatement pstmt = connection.prepareStatement(sql);
         PreparedStatement pstmt1 = connection.prepareStatement(sql1);
         pstmt.execute();
         pstmt1.execute();
-        
+
         return connection;
     }
-/**
+
+    /**
      * Metodi palauttaa tietokannasta kysymykset vastausvaihtoehtoineen listana.
+     * Jos se onnistuu, tulostetaan lisäksi tekstiä. Muuten päädytään
+     * poikkeukseen.
      *
-     *
-     *@return Palauttaa kysymykset vastausvaihtoehtoineen listana
+     * @return Palauttaa kysymykset vastausvaihtoehtoineen listana
      */
     @Override
     public List<Question> getQuestions() {
@@ -77,7 +83,15 @@ public class DatabaseQuestionDao implements QuestionDao {
         return allQuestions;
 
     }
-       @Override
+
+    /**
+     * Metodi tallentaa tietokantaan kysymyksen vastausvaihtoehtoineen. os se
+     * onnistuu, tulostetaan lisäksi tekstiä. Muuten päädytään poikkeukseen.
+     *
+     * @param question parametrinä annettu kysymys
+     *
+     */
+    @Override
     public void insertNewQuestion(Question question) {
 
         String sql = "INSERT INTO questions(question,rightAnswer,optionalAnswer) VALUES(?,?,?)";
@@ -98,11 +112,13 @@ public class DatabaseQuestionDao implements QuestionDao {
         System.out.println("Inserted question to database successfully");
 
     }
-/**
-     * Metodi palauttaa tietokannasta pelaajat ja heidän edellisen kierroksen pisteensä listana.
+
+    /**
+     * Metodi palauttaa tietokannasta pelaajat ja heidän edellisen kierroksen
+     * pisteensä listana. Jos se onnistuu, tulostetaan lisäksi tekstiä. Muuten
+     * päädytään poikkeukseen.
      *
-     *
-     *@return Palauttaa pelaajat ja heidän pisteensä listana
+     * @return Palauttaa pelaajat ja heidän pisteensä listana
      */
     @Override
     public List<Player> getPlayers() {
@@ -128,10 +144,12 @@ public class DatabaseQuestionDao implements QuestionDao {
 
         return allPlayers;
     }
-/**
-     * Metodi kirjoittaa tietokantaan uuden pelaajan ja tulostaa tekstin sen onnistumisen merkiksi.
+
+    /**
+     * Metodi kirjoittaa tietokantaan uuden pelaajan. Jos se onnistuu,
+     * tulostetaan lisäksi tekstiä. Muuten päädytään poikkeukseen.
      *
-     *
+     * @param player parametrinä annettu pelaaja
      *
      */
     @Override
@@ -154,9 +172,16 @@ public class DatabaseQuestionDao implements QuestionDao {
         System.out.println("Inserted data to database successfully");
 
     }
-    
+
+    /**
+     * Metodi kirjoittaa tietokantaan uuden pelaajan. Jos se onnistuu,
+     * tulostetaan lisäksi tekstiä. Muuten päädytään poikkeukseen.
+     *
+     * @param player parametrinä annettu pelaaja
+     *
+     */
     @Override
-    public void updatePlayersPoints(Player player){
+    public void updatePlayersPoints(Player player) {
         String sql = "Update player set points=? where name=?";
 
         PreparedStatement pstmt;
@@ -169,9 +194,9 @@ public class DatabaseQuestionDao implements QuestionDao {
             connection.close();
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseQuestionDao.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+        }
 
         System.out.println("Updated data to database successfully");
 
-}
+    }
 }

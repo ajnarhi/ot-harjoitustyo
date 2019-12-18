@@ -12,6 +12,9 @@ import javafx.application.Application;
  *
  * @author ajnarhi
  */
+/**
+ * Luokka käynnistää sovelluksen
+ */
 public class Main {
 
     public static void main(String[] args) {

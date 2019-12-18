@@ -76,25 +76,23 @@ public class ControllerTest {
 
         assertEquals(75, controller.ifNameIsOnTheDatabaseReturnPoints("niko"));
     }
-    
+
     @Test
-    public void insertNewQuestionIntoDatabaseInsertsNewQuestion(){
-      
+    public void insertNewQuestionIntoDatabaseInsertsNewQuestion() {
+
         controller.insertNewQuestionIntoDatabase(new Question("Testikysymys", "vastaus1", "vastaus2"));
-        
-        Question questionWithAnswers=controller.getRandomQuestionFromTheList();
+
+        Question questionWithAnswers = controller.getRandomQuestionFromTheList();
         String onlyQuestion = questionWithAnswers.ask();
-      
-        
+
         assertEquals("Testikysymys", onlyQuestion);
     }
 
-    
     @Test
-    public void updatePointsWorks(){
-        Player player=new Player("aarni",5);
+    public void updatePointsWorks() {
+        Player player = new Player("aarni", 5);
         controller.updatePlayersPointsOnDatabase(player);
-        
+
         assertEquals(7, player.getPoints());
     }
 }

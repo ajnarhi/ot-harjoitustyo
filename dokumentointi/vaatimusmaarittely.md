@@ -6,7 +6,7 @@ Sovelluksen takoituksena on harjoitella suomen kielen hankalaksi koettua osa-alu
 
 ### Käyttäjät
 
-Käyttäjäroolina on ainoastaan normaalikäyttäjä.
+Käyttäjäroolina on normaalikäyttäjä, joka pelaa ja pääkäyttäjä, joka lisää kysymyksiä vastauksineen tietokantaan.
 
 #### Suunnitellut toiminnallisuudet
 
@@ -16,19 +16,19 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 
 * Käyttäjä kirjoittaa nimensä, jolloin tarkistetaan, onko pelaaja pelannut aiemmin ja näytetään edellisen kierroksen pisteet. Pelaaja ei voi olla nimetön. 
 
-* Käyttäjä saa nähtäväkseen yksinkertaisen lauseen, josta puuttuu yksi sana 
+* Käyttäjä saa nähtäväkseen yksinkertaisen lauseen, josta puuttuu yksi sana. 
 
-* Käyttäjä valitsee kahdesta sanavaihtoehdosta omasta mielestään oikean sanan tyhjään kohtaan 
+* Käyttäjä valitsee kahdesta sanavaihtoehdosta omasta mielestään oikean sanan tyhjään kohtaan. 
 
-* Käyttäjä hyväksyy vaihtoehdon painamalla nappia
+* Käyttäjä hyväksyy vaihtoehdon painamalla nappia.
 
-* Sovellus kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon tai seuraavan lauseen  
+* Sovellus kertoo oliko vaihtoehto oikein ja tarjoaa joko ohjelman lopetusvaihtoehdon tai seuraavan lauseen.  
 
-* Sovellus valitsee seuraavan lauseen 
+* Sovellus valitsee seuraavan lauseen. 
 
-* Sovellus tarkistaa pelaajan tietoja tietokannasta ja lisää uuden pelaajan jos pelaaja on uusi, mutta ei lisää samaa pelaajaa toiste
+* Sovellus tarkistaa pelaajan tietoja tietokannasta ja lisää uuden pelaajan jos pelaaja on uusi, mutta ei lisää samaa pelaajaa toiste.
 
-* Sovellus päivittää aiemmin pelanneen pelaajan pistetiedot tietokantaan
+* Sovellus päivittää aiemmin pelanneen pelaajan pistetiedot tietokantaan.
 
 
 
@@ -36,8 +36,8 @@ Käyttäjäroolina on ainoastaan normaalikäyttäjä.
 #### Jatkokehitysideat
 
 
-* Ohjelmaa voi laajentaa kattamaan erilaisia kielioppiin liittyviä aiheita
+* Ohjelmaa voi laajentaa kattamaan erilaisia kielioppiin liittyviä aiheita.
 
-* Ohjelmaan voidaan lisätä kirjautuminen kaikille käytäjille
+* Ohjelmaan voidaan lisätä kirjautuminen kaikille käytäjille.
 
-* Eri käyttäjien kehityksen seuraaminen ja tehtävien vaikeuttaminen kehityksen mukaisesti
+* Eri käyttäjien kehityksen seuraaminen ja tehtävien vaikeuttaminen kehityksen mukaisesti.

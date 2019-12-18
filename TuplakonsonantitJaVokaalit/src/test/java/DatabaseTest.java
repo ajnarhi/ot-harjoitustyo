@@ -28,17 +28,17 @@ public class DatabaseTest {
     public void setUp() {
         test = new DatabaseQuestionDao("test.db");
     }
-    
-   //tämä testi on sama kuin alempana
+
+    //tämä testi on sama kuin alempana
     @Test
-    public void getPlayersWorks(){
+    public void getPlayersWorks() {
         Player player = new Player("Annu", 2);
         test.insertNewPlayer(player);
-        List<Player> playerList=test.getPlayers();
+        List<Player> playerList = test.getPlayers();
         Player firstPlayer = playerList.get(0);
 
         assertEquals("annu", firstPlayer.getName());
-        
+
     }
 
     @Test
@@ -50,7 +50,6 @@ public class DatabaseTest {
 
         assertEquals("Tämä on testikysymys", firstQuestion.ask());
     }
-    
 
     @Test
     public void insertNewPlayerWorks() {
@@ -61,7 +60,5 @@ public class DatabaseTest {
 
         assertEquals("annu", firstPlayer.getName());
     }
-    
-
 
 }

@@ -13,6 +13,9 @@ import domain.Question;
  *
  * @author ajnarhi
  */
+/**
+ * Rajapinta, jossa määrätään tietokantaominaisuuksia.
+ */
 public interface QuestionDao {
 
     List<Question> getQuestions();
