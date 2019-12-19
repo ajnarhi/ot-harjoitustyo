@@ -1,8 +1,16 @@
 # Käyttöohje
 
+Lataa sovellus [täältä](https://github.com/ajnarhi/ot-harjoitustyo/releases/tag/loppupalautus).
+
 ## Konfigurointi
 
+Ohjelma käyttää SQLite tietokantaa questions.db
+
 ## Ohjelman käynnistäminen
+
+Voit käynnistää ohjelman komennolla
+
+	java -jar TuplakonsonantitJaVokaalit-1.0-SNAPSHOT.jar
 
 ## Pelaaminen
 
