@@ -42,7 +42,7 @@ Sovelluslogiikan testausta varten on pystytetty valetietokanta luokkaan MockData
 
 ### Tietokanta
 
-Sovellus tallettaa ja lukee tietoja tietokannasta, johon on tallennettu taulut kysymyksiä (questions) ja pelaajia(player) varten. Jos tauluja ei ole, ne luodaan.
+Sovellus tallettaa ja lukee tietoja tietokannasta, johon on tallennettu taulut kysymyksiä (questions) ja pelaajia (player) varten. Jos tauluja ei ole, ne luodaan.
 Questions taulu sisältää sarakkeet kysymykselle, sekä siihen liittyviin oikeaan ja väärään vastaukseen. Player taulu sisältää sarakkeet pelaajan nimelle ja viimeisimmän pelikierroksen pisteille.
 
 ## Päätoiminnallisuudet
