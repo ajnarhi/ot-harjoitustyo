@@ -8,7 +8,7 @@ Sovelluksen takoituksena on harjoitella suomen kielen hankalaksi koettua osa-alu
 
 Käyttäjäroolina on normaalikäyttäjä, joka pelaa ja pääkäyttäjä, joka lisää kysymyksiä vastauksineen tietokantaan.
 
-#### Toteutetu toiminnallisuudet
+#### Toteutetut toiminnallisuudet
 
 * Käyttäjä voi kirjoittaa nimekseen "Admin", jolloin kysytään salasanaa. Tällöin avautuu pääkäyttäjän näkymä.
 
