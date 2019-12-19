@@ -2,7 +2,7 @@
 
 ## Rakenne
 
-Ohjelman rakenne noudattelee kolmitasoista kerrosarkkitehtuuria. Koodin pakkausrakenne on seuraava: 
+Ohjelman rakenne on kolmikerroksinen kerrosarkkitehtuuri. Koodin pakkausrakenne on seuraava: 
 
 ![Alustava pakkausrakenne](pakkauskaavio.jpg)
 
@@ -28,7 +28,7 @@ Käyttöliittymä pääasiassa vain rakentaa näkymiä ja käyttää Controller 
 
 ## Sovelluslogiikka
 
-Sovelluksen loogiikan muodostavat luokat Player ja Question, jotka kuvaavat pääkäyttäjää, pelaajaa ja pelaajalle esitettäviä kysymyksiä:
+Sovelluksen loogiikan muodostavat luokat Admin, Player ja Question, jotka kuvaavat pääkäyttäjää, pelaajaa ja pelaajalle esitettäviä kysymyksiä. 
 
 ![Alustava luokkakaavio](luokkakaavio_loppu.JPG)
 
@@ -49,6 +49,29 @@ Questions taulu sisältää sarakkeet kysymykselle, sekä siihen liittyviin oike
 
 ### Pelaaminen
 
+Seuraavassa esittelen sekvenssikaaviokuvin kaksi ohjelman päätoimintoa.
 
 
+### Aikaisemmin pelannut pelaaja alkaa pelata
 
+Aikaisemmin pelannut pelaaja palaa pelin pariin ja hänen tietonsa tarkistetaan tietokannasta. Pelaaja kirjaa nimensä, jonka jälkeen tietokannasta tarkistetaan onko pelaaja pelannut aikaisemmin. Jos on, pelaajalle asetetaan nimi ja pisteet sekä siirrytään näkymään, jossa pelaaja toivotetaan tervetulleeksi takaisin ja kerrotaan hänen edellisen kierroksen pisteensä.
+
+![VanhaPelaajaPelaa](vanhapelaaja_sekvenssi.jpg)
+
+
+### Pääkäyttäjä kirjautuu ja tallettaa uuden kysymyksen
+
+Toisena näemme miten Admin toiminto toimii. Kun pelaajan nimeksi on kirjoitettu Admin/admin ja painettu nappia, tarkistetaan nimi. Jos nimi vastaa adminia, siirrytään näkymään, jossa pyydetään salasanaa. Salasana tarkistetaan Admin luokasta, että se vastaa Adminin salasanaa, joka on 1234. Jos näin on avataan näkymä, jossa voidaan lisätä kysymyksiä tietokantaan kirjoittamalla kysymys ja vastausvaihtoehdot sekä painamalla nappia. Lopulta avautuu näkymä, jossa voi valita lopettaako pelin vai lisääkö lisää kysymyksiä.
+
+![Admin](admin_sekvenssi.jpg)
+
+
+## Ohjelman rakenteeseen jääneet heikkoudet
+
+### Käyttöliittymä
+
+Käyttöliittymän koodi on varsin pitkä ja sen logiikan seuraaminen voi olla haastavaa. Erilaiset näkymät olisi voinut tallentaa omiksi metodeikseen, jolloin tilanne olisi selkiytynyt. Käyttöliittymän selkeyttä on yritetty parantaa lisäämällä kommentteja, mutta tämä olisi voitu tehdä ohjelmallisestikin.
+
+### Controller
+
+Nyt Controller luokka pitää huolta moninaisista tehtävistä. Olisi ollut ehkä ollut järkevää pilkkoa vielä Controller luokka pienemmäksi.
